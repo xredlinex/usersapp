@@ -38,9 +38,19 @@
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEX-2H-kZE">
                                 <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfJ-2W-2rZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                        <state key="normal" title="Reload Users"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="RfJ-2W-2rZ" firstAttribute="leading" secondItem="EEX-2H-kZE" secondAttribute="leading" id="2P8-uY-8Ca"/>
+                                    <constraint firstAttribute="bottom" secondItem="RfJ-2W-2rZ" secondAttribute="bottom" id="J3f-Vy-Nws"/>
+                                    <constraint firstItem="RfJ-2W-2rZ" firstAttribute="top" secondItem="EEX-2H-kZE" secondAttribute="top" id="Yj5-WT-hSf"/>
                                     <constraint firstAttribute="height" constant="60" id="jzm-JO-q2o"/>
+                                    <constraint firstAttribute="trailing" secondItem="RfJ-2W-2rZ" secondAttribute="trailing" id="qLk-Ix-UOW"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0a-v6-eue">
