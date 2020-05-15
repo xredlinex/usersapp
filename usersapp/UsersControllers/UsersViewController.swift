@@ -11,19 +11,39 @@ import UIKit
 class UsersViewController: UIViewController {
     
     
-    @IBOutlet weak var segmentControll: UISegmentedControl!
-    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var viewContainer: UIView!
+    
+     var usersListViews: [UIView]!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupViewControllers()
     }
     
-    @IBAction func didTapSegmentControll(_ sender: Any) {
+    @IBAction func didTapsegmentedControl(_ sender: Any) {
+        self.viewContainer.bringSubviewToFront(usersListViews[segmentedControl.selectedSegmentIndex])
     }
     
   
 
+}
+
+extension UsersViewController {
+    
+    func setupViewControllers() {
+        
+        usersListViews = [UIView]()
+        usersListViews?.append(ListViewController().view)
+        usersListViews?.append(GridViewController().view)
+        
+        for controller in usersListViews {
+            viewContainer.addSubview(controller)
+        }
+        viewContainer.bringSubviewToFront(usersListViews[0])
+        
+    }
 }

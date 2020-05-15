@@ -33,7 +33,7 @@
                                     <segment title="" image="square.grid.3x2" catalog="system"/>
                                 </segments>
                                 <connections>
-                                    <action selector="didTapSegmentControll:" destination="BYZ-38-t0r" eventType="valueChanged" id="W2O-DI-Ua5"/>
+                                    <action selector="didTapsegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="POI-n4-rCd"/>
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEX-2H-kZE">
@@ -67,7 +67,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6bw-7o-kLf"/>
                     <connections>
-                        <outlet property="segmentControll" destination="tp7-JI-kmK" id="OnV-td-zWc"/>
+                        <outlet property="segmentedControl" destination="tp7-JI-kmK" id="KD0-Wa-Hd2"/>
                         <outlet property="viewContainer" destination="m0a-v6-eue" id="UWV-zD-O5Y"/>
                     </connections>
                 </viewController>
