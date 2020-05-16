@@ -28,8 +28,6 @@ class ResultsModel: Codable {
     }
 }
 
-
-
 class UserModel: Codable {
     var id: UserId?
     var gender: String?
