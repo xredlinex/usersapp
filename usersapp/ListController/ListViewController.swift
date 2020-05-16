@@ -30,7 +30,7 @@ class ListViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        
+        tableView.reloadData()
         
         
         
