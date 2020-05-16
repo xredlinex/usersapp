@@ -72,7 +72,9 @@ extension UserListViewController: UICollectionViewDataSource, UICollectionViewDe
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if isListView {
-            let size = CGSize(width: collectionView.frame.width , height: 100)
+            
+            
+            let size = CGSize(width: collectionView.frame.width , height: 118)
             return size
         } else {
              let size = CGSize(width: collectionView.frame.width / 3 - 10 , height: 100)
