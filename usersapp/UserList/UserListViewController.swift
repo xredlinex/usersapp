@@ -40,11 +40,9 @@ class UserListViewController: UIViewController {
     @IBAction func didTapChangeSegmentedControl(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            debugPrint("list")
             isListView = true
             collectionView.reloadData()
         case 1:
-            debugPrint("grid")
             isListView = false
             collectionView.reloadData()
         default:
@@ -53,7 +51,7 @@ class UserListViewController: UIViewController {
     }
 }
 
-extension UserListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension UserListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return users.count
@@ -73,15 +71,12 @@ extension UserListViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-         let width = view.frame.width
-         if isListView {
-             return CGSize(width: width, height: 120)
-         }else {
-             return CGSize(width: (width - 15)/2, height: (width - 15)/2)
-         }
+        if isListView {
+            let size = CGSize(width: collectionView.frame.width , height: 100)
+            return size
+        } else {
+             let size = CGSize(width: collectionView.frame.width / 3 - 10 , height: 100)
+             return size
+        }
      }
-
-    
-    
-    
 }

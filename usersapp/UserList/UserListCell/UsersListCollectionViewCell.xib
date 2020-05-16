@@ -10,15 +10,31 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UsersListCollectionViewCell" id="gTV-IL-0wX" customClass="UsersListCollectionViewCell" customModule="usersapp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="571" height="125"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <rect key="frame" x="0.0" y="0.0" width="571" height="125"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bds-f2-Qu6">
+                        <rect key="frame" x="0.0" y="0.0" width="571" height="125"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="125" id="Edx-Ug-FvA"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bds-f2-Qu6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EQF-uG-F7b"/>
+                <constraint firstAttribute="bottom" secondItem="bds-f2-Qu6" secondAttribute="bottom" id="WPa-jh-2pG"/>
+                <constraint firstAttribute="trailing" secondItem="bds-f2-Qu6" secondAttribute="trailing" id="YY3-Uf-8jb"/>
+                <constraint firstItem="bds-f2-Qu6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nKb-fi-KeR"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="132" y="153"/>
+            <size key="customSize" width="571" height="125"/>
+            <point key="canvasLocation" x="-119.56521739130436" y="31.138392857142854"/>
         </collectionViewCell>
     </objects>
 </document>

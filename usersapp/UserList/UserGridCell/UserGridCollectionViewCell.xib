@@ -18,7 +18,7 @@
             </view>
             <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="132" y="153"/>
+            <point key="canvasLocation" x="-203" y="-43"/>
         </collectionViewCell>
     </objects>
 </document>

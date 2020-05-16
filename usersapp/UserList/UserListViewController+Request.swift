@@ -26,13 +26,6 @@ extension UserListViewController {
                             let resultModel = try JSONDecoder().decode(ResultsModel.self, from: data)
                             if let users = resultModel.results {
                                 self.users.append(contentsOf: users)
-                                
-                                for i in self.users {
-                                    debugPrint(i.email)
-                                }
-                                
-                                
-                                
                                 DispatchQueue.main.async {
                                     self.collectionView.reloadData()
                                 }
