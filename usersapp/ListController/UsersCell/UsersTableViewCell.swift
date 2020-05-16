@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import Kingfisher
 
 class UsersTableViewCell: UITableViewCell {
-
+    
+    
+    @IBOutlet weak var nameTextyLabel: UILabel!
+    
+    @IBOutlet weak var lastNameTextLabel: UILabel!
+    
+    @IBOutlet weak var mailtextLabel: UILabel!
+    
+    @IBOutlet weak var userImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -21,6 +30,21 @@ class UsersTableViewCell: UITableViewCell {
         
     }
     
+    func updateUserCell(_ user: UserModel) {
+        debugPrint(user.picture?.large)
+        nameTextyLabel.text = user.name?.first
+        lastNameTextLabel.text = user.name?.last
+        mailtextLabel.text = user.email
+        
+        if let imgUrl = user.picture?.medium {
+            if let url = URL(string: imgUrl) {
+                userImageView.kf.setImage(with: url)
+            }
+        }
+        
+        
+        
+    }
 }
 
 

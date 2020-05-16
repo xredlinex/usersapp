@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="usersapp" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="uX7-Q5-SP2" id="B7e-PX-BSA"/>
+                <outlet property="tableView" destination="uX7-Q5-SP2" id="ebO-bS-u7T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

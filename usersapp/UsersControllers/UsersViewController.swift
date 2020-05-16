@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class UsersViewController: UIViewController {
     
@@ -16,12 +18,14 @@ class UsersViewController: UIViewController {
     
      var usersListViews = [UIView]()
     
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupViewControllers()
+        
     }
     
     @IBAction func didTapsegmentedControl(_ sender: Any) {
@@ -45,4 +49,18 @@ extension UsersViewController {
         }
         viewContainer.bringSubviewToFront(usersListViews[0])
     }
+}
+
+
+extension UsersViewController {
+    
+    
+    func getusers() {
+        
+        
+        
+        
+    }
+    
+  
 }

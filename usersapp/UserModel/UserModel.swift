@@ -6,29 +6,67 @@
 //  Copyright © 2020 alexey sorochan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class UserModel {
+class InfoModel: Codable {
+    var seed: String?
+    var results: Int?
+    var page: Int?
+    var version: String?
+    
+    enum CodingKesy: String, CodingKey {
+        case seed, results, page, version
+    }
+}
+
+class ResultsModel: Codable {
+    var results: [UserModel]?
+    var info: InfoModel?
+    
+    enum CodingKeys: String, CodingKey {
+        case results, info
+    }
+}
+
+
+
+class UserModel: Codable {
     var id: UserId?
     var gender: String?
     var name: UserName?
     var email: String?
     var picture: UserPicture?
+    
+    enum CodingKeys: String, CodingKey {
+        case id, gender, name, email, picture
+    }
 }
 
-class UserId {
+class UserId: Codable {
     var name: String?
     var valuse: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case name, valuse
+    }
 }
 
-class UserName {
+class UserName: Codable {
     var title: String?
     var first: String?
     var last: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case title, first, last
+    }
 }
 
-class UserPicture {
+class UserPicture: Codable {
     var large: String?
     var medium: String?
     var thumbnail: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case large, medium, thumbnail
+    }
 }
