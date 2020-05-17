@@ -8,28 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		2D5EF55525E976C407F79E03 /* libPods-usersapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFED43880099D930B20CAFD /* libPods-usersapp.a */; };
+		973E2C7D24717EB500DAFEF6 /* UserListViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973E2C7C24717EB500DAFEF6 /* UserListViewController+CollectionView.swift */; };
 		97A672DB246EB67B0030E7C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A672DA246EB67B0030E7C2 /* AppDelegate.swift */; };
 		97A672DD246EB67B0030E7C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A672DC246EB67B0030E7C2 /* SceneDelegate.swift */; };
 		97A672E2246EB67B0030E7C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97A672E0246EB67B0030E7C2 /* Main.storyboard */; };
 		97A672E4246EB67C0030E7C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A672E3246EB67C0030E7C2 /* Assets.xcassets */; };
 		97A672E7246EB67C0030E7C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97A672E5246EB67C0030E7C2 /* LaunchScreen.storyboard */; };
 		97D39EDB246F2E5E00DC4C2B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39EDA246F2E5E00DC4C2B /* UserModel.swift */; };
-		97D39EDE246F32E600DC4C2B /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39EDD246F32E600DC4C2B /* UsersViewController.swift */; };
-		97D39EE1246F33A500DC4C2B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39EDF246F33A500DC4C2B /* ListViewController.swift */; };
-		97D39EE2246F33A500DC4C2B /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D39EE0246F33A500DC4C2B /* ListViewController.xib */; };
-		97D39EE6246F33DB00DC4C2B /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39EE4246F33DB00DC4C2B /* GridViewController.swift */; };
-		97D39EE7246F33DB00DC4C2B /* GridViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D39EE5246F33DB00DC4C2B /* GridViewController.xib */; };
-		97D39EEF246F34D500DC4C2B /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39EED246F34D500DC4C2B /* UsersTableViewCell.swift */; };
-		97D39EF0246F34D500DC4C2B /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D39EEE246F34D500DC4C2B /* UsersTableViewCell.xib */; };
-		97D39EF4246F350500DC4C2B /* UsersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39EF2246F350500DC4C2B /* UsersCollectionViewCell.swift */; };
-		97D39EF5246F350500DC4C2B /* UsersCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D39EF3246F350500DC4C2B /* UsersCollectionViewCell.xib */; };
-		97D39EF8246F363000DC4C2B /* UserDetailedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39EF7246F363000DC4C2B /* UserDetailedInfoViewController.swift */; };
-		97D39EFB246FE86000DC4C2B /* UsersViewController+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39EFA246FE86000DC4C2B /* UsersViewController+Services.swift */; };
+		97D39EFD24702A7300DC4C2B /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39EFC24702A7300DC4C2B /* UserListViewController.swift */; };
+		97D39F002470301400DC4C2B /* UserListViewController+Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39EFF2470301400DC4C2B /* UserListViewController+Request.swift */; };
+		97D39F032470448200DC4C2B /* UsersListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39F012470448200DC4C2B /* UsersListCollectionViewCell.swift */; };
+		97D39F042470448200DC4C2B /* UsersListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D39F022470448200DC4C2B /* UsersListCollectionViewCell.xib */; };
+		97D39F08247045C700DC4C2B /* UserGridCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D39F06247045C700DC4C2B /* UserGridCollectionViewCell.swift */; };
+		97D39F09247045C700DC4C2B /* UserGridCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D39F07247045C700DC4C2B /* UserGridCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CFED43880099D930B20CAFD /* libPods-usersapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-usersapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C9804803408A17CDDC6DE3F /* Pods-usersapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-usersapp.debug.xcconfig"; path = "Target Support Files/Pods-usersapp/Pods-usersapp.debug.xcconfig"; sourceTree = "<group>"; };
+		973E2C7C24717EB500DAFEF6 /* UserListViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		97A672D7246EB67B0030E7C2 /* usersapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = usersapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A672DA246EB67B0030E7C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97A672DC246EB67B0030E7C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,17 +35,12 @@
 		97A672E6246EB67C0030E7C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97A672E8246EB67C0030E7C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97D39EDA246F2E5E00DC4C2B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		97D39EDD246F32E600DC4C2B /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
-		97D39EDF246F33A500DC4C2B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		97D39EE0246F33A500DC4C2B /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
-		97D39EE4246F33DB00DC4C2B /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
-		97D39EE5246F33DB00DC4C2B /* GridViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridViewController.xib; sourceTree = "<group>"; };
-		97D39EED246F34D500DC4C2B /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
-		97D39EEE246F34D500DC4C2B /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
-		97D39EF2246F350500DC4C2B /* UsersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersCollectionViewCell.swift; sourceTree = "<group>"; };
-		97D39EF3246F350500DC4C2B /* UsersCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersCollectionViewCell.xib; sourceTree = "<group>"; };
-		97D39EF7246F363000DC4C2B /* UserDetailedInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailedInfoViewController.swift; sourceTree = "<group>"; };
-		97D39EFA246FE86000DC4C2B /* UsersViewController+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersViewController+Services.swift"; sourceTree = "<group>"; };
+		97D39EFC24702A7300DC4C2B /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		97D39EFF2470301400DC4C2B /* UserListViewController+Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListViewController+Request.swift"; sourceTree = "<group>"; };
+		97D39F012470448200DC4C2B /* UsersListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListCollectionViewCell.swift; sourceTree = "<group>"; };
+		97D39F022470448200DC4C2B /* UsersListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersListCollectionViewCell.xib; sourceTree = "<group>"; };
+		97D39F06247045C700DC4C2B /* UserGridCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGridCollectionViewCell.swift; sourceTree = "<group>"; };
+		97D39F07247045C700DC4C2B /* UserGridCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserGridCollectionViewCell.xib; sourceTree = "<group>"; };
 		E06CD453B492891154FA9FD6 /* Pods-usersapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-usersapp.release.xcconfig"; path = "Target Support Files/Pods-usersapp/Pods-usersapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,11 +79,9 @@
 			children = (
 				97A672DA246EB67B0030E7C2 /* AppDelegate.swift */,
 				97A672DC246EB67B0030E7C2 /* SceneDelegate.swift */,
-				97D39EDC246F2E6400DC4C2B /* UserModel */,
-				97D39EF9246F363900DC4C2B /* UsersControllers */,
-				97D39EE3246F33B200DC4C2B /* ListController */,
-				97D39EE8246F33E400DC4C2B /* GridController */,
 				97A672E0246EB67B0030E7C2 /* Main.storyboard */,
+				97D39EDC246F2E6400DC4C2B /* UserModel */,
+				97D39EFE24702AC000DC4C2B /* UserList */,
 				97A672E3246EB67C0030E7C2 /* Assets.xcassets */,
 				97A672E5246EB67C0030E7C2 /* LaunchScreen.storyboard */,
 				97A672E8246EB67C0030E7C2 /* Info.plist */,
@@ -107,52 +97,34 @@
 			path = UserModel;
 			sourceTree = "<group>";
 		};
-		97D39EE3246F33B200DC4C2B /* ListController */ = {
+		97D39EFE24702AC000DC4C2B /* UserList */ = {
 			isa = PBXGroup;
 			children = (
-				97D39EDF246F33A500DC4C2B /* ListViewController.swift */,
-				97D39EE0246F33A500DC4C2B /* ListViewController.xib */,
-				97D39EF1246F34D800DC4C2B /* UsersCell */,
+				97D39EFC24702A7300DC4C2B /* UserListViewController.swift */,
+				973E2C7C24717EB500DAFEF6 /* UserListViewController+CollectionView.swift */,
+				97D39EFF2470301400DC4C2B /* UserListViewController+Request.swift */,
+				97D39F052470449000DC4C2B /* UserListCell */,
+				97D39F0A247045CF00DC4C2B /* UserGridCell */,
 			);
-			path = ListController;
+			path = UserList;
 			sourceTree = "<group>";
 		};
-		97D39EE8246F33E400DC4C2B /* GridController */ = {
+		97D39F052470449000DC4C2B /* UserListCell */ = {
 			isa = PBXGroup;
 			children = (
-				97D39EE4246F33DB00DC4C2B /* GridViewController.swift */,
-				97D39EE5246F33DB00DC4C2B /* GridViewController.xib */,
-				97D39EF6246F350800DC4C2B /* UsersCell */,
+				97D39F012470448200DC4C2B /* UsersListCollectionViewCell.swift */,
+				97D39F022470448200DC4C2B /* UsersListCollectionViewCell.xib */,
 			);
-			path = GridController;
+			path = UserListCell;
 			sourceTree = "<group>";
 		};
-		97D39EF1246F34D800DC4C2B /* UsersCell */ = {
+		97D39F0A247045CF00DC4C2B /* UserGridCell */ = {
 			isa = PBXGroup;
 			children = (
-				97D39EED246F34D500DC4C2B /* UsersTableViewCell.swift */,
-				97D39EEE246F34D500DC4C2B /* UsersTableViewCell.xib */,
+				97D39F06247045C700DC4C2B /* UserGridCollectionViewCell.swift */,
+				97D39F07247045C700DC4C2B /* UserGridCollectionViewCell.xib */,
 			);
-			path = UsersCell;
-			sourceTree = "<group>";
-		};
-		97D39EF6246F350800DC4C2B /* UsersCell */ = {
-			isa = PBXGroup;
-			children = (
-				97D39EF2246F350500DC4C2B /* UsersCollectionViewCell.swift */,
-				97D39EF3246F350500DC4C2B /* UsersCollectionViewCell.xib */,
-			);
-			path = UsersCell;
-			sourceTree = "<group>";
-		};
-		97D39EF9246F363900DC4C2B /* UsersControllers */ = {
-			isa = PBXGroup;
-			children = (
-				97D39EDD246F32E600DC4C2B /* UsersViewController.swift */,
-				97D39EFA246FE86000DC4C2B /* UsersViewController+Services.swift */,
-				97D39EF7246F363000DC4C2B /* UserDetailedInfoViewController.swift */,
-			);
-			path = UsersControllers;
+			path = UserGridCell;
 			sourceTree = "<group>";
 		};
 		D0BBF0F4DB98DD5570CA13AE /* Pods */ = {
@@ -231,12 +203,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97D39EE7246F33DB00DC4C2B /* GridViewController.xib in Resources */,
+				97D39F09247045C700DC4C2B /* UserGridCollectionViewCell.xib in Resources */,
 				97A672E7246EB67C0030E7C2 /* LaunchScreen.storyboard in Resources */,
-				97D39EF0246F34D500DC4C2B /* UsersTableViewCell.xib in Resources */,
-				97D39EF5246F350500DC4C2B /* UsersCollectionViewCell.xib in Resources */,
 				97A672E4246EB67C0030E7C2 /* Assets.xcassets in Resources */,
-				97D39EE2246F33A500DC4C2B /* ListViewController.xib in Resources */,
+				97D39F042470448200DC4C2B /* UsersListCollectionViewCell.xib in Resources */,
 				97A672E2246EB67B0030E7C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,13 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				97A672DB246EB67B0030E7C2 /* AppDelegate.swift in Sources */,
-				97D39EFB246FE86000DC4C2B /* UsersViewController+Services.swift in Sources */,
-				97D39EF8246F363000DC4C2B /* UserDetailedInfoViewController.swift in Sources */,
-				97D39EF4246F350500DC4C2B /* UsersCollectionViewCell.swift in Sources */,
-				97D39EE1246F33A500DC4C2B /* ListViewController.swift in Sources */,
-				97D39EE6246F33DB00DC4C2B /* GridViewController.swift in Sources */,
-				97D39EEF246F34D500DC4C2B /* UsersTableViewCell.swift in Sources */,
-				97D39EDE246F32E600DC4C2B /* UsersViewController.swift in Sources */,
+				97D39F002470301400DC4C2B /* UserListViewController+Request.swift in Sources */,
+				973E2C7D24717EB500DAFEF6 /* UserListViewController+CollectionView.swift in Sources */,
+				97D39EFD24702A7300DC4C2B /* UserListViewController.swift in Sources */,
+				97D39F08247045C700DC4C2B /* UserGridCollectionViewCell.swift in Sources */,
+				97D39F032470448200DC4C2B /* UsersListCollectionViewCell.swift in Sources */,
 				97D39EDB246F2E5E00DC4C2B /* UserModel.swift in Sources */,
 				97A672DD246EB67B0030E7C2 /* SceneDelegate.swift in Sources */,
 			);
