@@ -21,7 +21,7 @@ class UsersListCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
     }
     
     func updateListCell(_ user: UserModel) {
@@ -42,18 +42,18 @@ extension UsersListCollectionViewCell {
     func setupCellUi(_ onlineStatus: Bool) {
         
         if !onlineStatus {
-            avatarView.layer.borderColor = UIColor.gray.cgColor
-            onlineStatusView.layer.backgroundColor = UIColor.gray.cgColor
-        } else {
-            avatarView.layer.borderColor = UIColor.green.cgColor
-            onlineStatusView.layer.backgroundColor = UIColor.green.cgColor
-        }
+                   avatarView.layer.borderColor = UIColor.gray.cgColor
+                   onlineStatusView.layer.backgroundColor = UIColor.clear.cgColor
+               } else {
+                   avatarView.layer.borderColor = UIColor.green.cgColor
+                   onlineStatusView.layer.backgroundColor = UIColor.green.cgColor
+               }
         avatarView.clipsToBounds = true
         avatarView.layer.cornerRadius = avatarView.frame.width / 2
         avatarView.layer.borderWidth = 1
-        avatarImageView.layer.cornerRadius = avatarView.frame.width / 2
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
         avatarImageView.layer.borderColor = UIColor.gray.cgColor
-        avatarImageView.layer.borderWidth = 1
+//        avatarImageView.layer.borderWidth = 1
         onlineStatusView.clipsToBounds = true
         onlineStatusView.layer.cornerRadius = onlineStatusView.frame.width / 2
     }
