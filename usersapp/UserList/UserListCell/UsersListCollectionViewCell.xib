@@ -20,7 +20,7 @@
                         <rect key="frame" x="15" y="5" width="544" height="108"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWP-qD-HM3">
-                                <rect key="frame" x="15" y="14" width="80" height="80"/>
+                                <rect key="frame" x="10" y="14" width="80" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4P-HI-CTj">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -55,7 +55,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="last name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPI-YS-BV7">
-                                <rect key="frame" x="115" y="44" width="414" height="20"/>
+                                <rect key="frame" x="110" y="44" width="419" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="8cO-C0-zWm"/>
                                 </constraints>
@@ -64,7 +64,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ea-eA-wja">
-                                <rect key="frame" x="115" y="14" width="414" height="20"/>
+                                <rect key="frame" x="110" y="14" width="419" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="DbL-uZ-ts3"/>
                                 </constraints>
@@ -73,7 +73,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjH-iQ-Nek">
-                                <rect key="frame" x="115" y="74" width="414" height="20"/>
+                                <rect key="frame" x="110" y="74" width="419" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="vcd-ua-caU"/>
                                 </constraints>
@@ -95,7 +95,7 @@
                             <constraint firstItem="9Ea-eA-wja" firstAttribute="top" secondItem="HWP-qD-HM3" secondAttribute="top" id="m3s-cI-zzp"/>
                             <constraint firstItem="qjH-iQ-Nek" firstAttribute="top" secondItem="PPI-YS-BV7" secondAttribute="bottom" constant="10" id="nLd-z1-zJt"/>
                             <constraint firstAttribute="height" constant="108" id="noH-4d-KNq"/>
-                            <constraint firstItem="HWP-qD-HM3" firstAttribute="leading" secondItem="bds-f2-Qu6" secondAttribute="leading" constant="15" id="r7h-XJ-9Me"/>
+                            <constraint firstItem="HWP-qD-HM3" firstAttribute="leading" secondItem="bds-f2-Qu6" secondAttribute="leading" constant="10" id="r7h-XJ-9Me"/>
                             <constraint firstItem="PPI-YS-BV7" firstAttribute="trailing" secondItem="9Ea-eA-wja" secondAttribute="trailing" id="rrD-mI-RNF"/>
                             <constraint firstAttribute="bottom" secondItem="HWP-qD-HM3" secondAttribute="bottom" constant="14" id="tg7-R2-eCx"/>
                         </constraints>

@@ -102,84 +102,6 @@
             </objects>
             <point key="canvasLocation" x="1071.0144927536232" y="116.51785714285714"/>
         </scene>
-        <!--Users View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="UsersViewController" id="BYZ-38-t0r" customClass="UsersViewController" customModule="usersapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="35r-uT-KjB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="1Cu-yz-h2O"/>
-                                </constraints>
-                            </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="tp7-JI-kmK">
-                                <rect key="frame" x="254" y="56.5" width="140" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="CuJ-fA-Fxi"/>
-                                    <constraint firstAttribute="width" constant="140" id="doy-E7-oSD"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="" image="list.dash" catalog="system"/>
-                                    <segment title="" image="square.grid.3x2" catalog="system"/>
-                                </segments>
-                                <connections>
-                                    <action selector="didTapsegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="POI-n4-rCd"/>
-                                </connections>
-                            </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEX-2H-kZE">
-                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfJ-2W-2rZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
-                                        <state key="normal" title="Reload Users"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="RfJ-2W-2rZ" firstAttribute="leading" secondItem="EEX-2H-kZE" secondAttribute="leading" id="2P8-uY-8Ca"/>
-                                    <constraint firstAttribute="bottom" secondItem="RfJ-2W-2rZ" secondAttribute="bottom" id="J3f-Vy-Nws"/>
-                                    <constraint firstItem="RfJ-2W-2rZ" firstAttribute="top" secondItem="EEX-2H-kZE" secondAttribute="top" id="Yj5-WT-hSf"/>
-                                    <constraint firstAttribute="height" constant="60" id="jzm-JO-q2o"/>
-                                    <constraint firstAttribute="trailing" secondItem="RfJ-2W-2rZ" secondAttribute="trailing" id="qLk-Ix-UOW"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0a-v6-eue">
-                                <rect key="frame" x="0.0" y="104" width="414" height="698"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="35r-uT-KjB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0p5-Tc-vLv"/>
-                            <constraint firstItem="tp7-JI-kmK" firstAttribute="centerY" secondItem="35r-uT-KjB" secondAttribute="centerY" id="4HH-IX-hrF"/>
-                            <constraint firstItem="EEX-2H-kZE" firstAttribute="top" secondItem="m0a-v6-eue" secondAttribute="bottom" id="KNp-Eh-Bfi"/>
-                            <constraint firstItem="m0a-v6-eue" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QHx-Vn-Pza"/>
-                            <constraint firstItem="m0a-v6-eue" firstAttribute="top" secondItem="35r-uT-KjB" secondAttribute="bottom" id="SQJ-BI-PQJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m0a-v6-eue" secondAttribute="trailing" id="Sra-Nf-22U"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EEX-2H-kZE" secondAttribute="bottom" id="THj-3F-pjL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="35r-uT-KjB" secondAttribute="trailing" id="Upq-a9-tLh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tp7-JI-kmK" secondAttribute="trailing" constant="20" id="Urq-j9-e11"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EEX-2H-kZE" secondAttribute="trailing" id="Y9T-AD-5IA"/>
-                            <constraint firstItem="EEX-2H-kZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gvs-PZ-02m"/>
-                            <constraint firstItem="35r-uT-KjB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="w01-ha-E0u"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="6bw-7o-kLf"/>
-                    <connections>
-                        <outlet property="segmentedControl" destination="tp7-JI-kmK" id="KD0-Wa-Hd2"/>
-                        <outlet property="viewContainer" destination="m0a-v6-eue" id="UWV-zD-O5Y"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2323" y="45"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="jr9-C6-vO2">
             <objects>
@@ -202,6 +124,5 @@
     <resources>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="rectangle.grid.2x2" catalog="system" width="128" height="99"/>
-        <image name="square.grid.3x2" catalog="system" width="128" height="80"/>
     </resources>
 </document>
