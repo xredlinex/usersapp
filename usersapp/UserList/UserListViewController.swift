@@ -25,15 +25,12 @@ class UserListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        requestUsers()
-        //        if users.isEmpty {
-        //            isloaded = true
-        //            requestUsers()
-        //        }
-        //
-        self.setupGridView()
+        if users.isEmpty {
+            isloaded = false
+            requestUsers()
+        }
         
+        self.setupGridView()
         collectionView.register(UINib(nibName: "UsersListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UsersListCollectionViewCell")
         collectionView.register(UINib(nibName: "UserGridCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UserGridCollectionViewCell")
         collectionView.reloadData()
@@ -47,7 +44,7 @@ class UserListViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
-
+    
     
     @IBAction func didTapChangeSegmentedControl(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {

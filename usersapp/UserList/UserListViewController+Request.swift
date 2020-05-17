@@ -13,7 +13,7 @@ extension UserListViewController {
     
     func requestUsers() {
         
-//        if !isloaded {
+        if !isloaded {
             
             let parameters = ["page": pageNumber,
                               "results": pageSize]
@@ -36,6 +36,6 @@ extension UserListViewController {
                     }
                 }
             }
-//        }
+        }
     }
 }
