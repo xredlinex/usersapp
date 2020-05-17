@@ -21,15 +21,11 @@ class UserGridCollectionViewCell: UICollectionViewCell {
         
     }
     
-    
     func updateGrdiCell(_ user: UserModel) {
-        
         
         if let url = URL(string: user.picture?.medium ?? "") {
             userPictureImageView.kf.setImage(with: url)
         }
-        
-        
         userPictureBorderView.clipsToBounds = true
         userPictureBorderView.layer.cornerRadius = userPictureBorderView.frame.width / 2
         userPictureBorderView.layer.borderWidth = 2
@@ -43,7 +39,5 @@ class UserGridCollectionViewCell: UICollectionViewCell {
         onlineStatusView.clipsToBounds = true
         onlineStatusView.layer.cornerRadius = onlineStatusView.frame.width / 2
         onlineStatusView.layer.backgroundColor = UIColor.green.cgColor
-        
     }
-    
 }
