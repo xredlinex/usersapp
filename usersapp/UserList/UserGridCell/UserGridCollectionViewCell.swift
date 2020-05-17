@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import Kingfisher
 
 class UserGridCollectionViewCell: UICollectionViewCell {
-
+    
+    
+    @IBOutlet weak var userPictureBorderView: UIView!
+    
+    @IBOutlet weak var userPictureView: UIView!
+    
+    @IBOutlet weak var userPictureImageView: UIImageView!
+    @IBOutlet weak var onlineStatusView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,7 +27,30 @@ class UserGridCollectionViewCell: UICollectionViewCell {
     
     func updateGrdiCell(_ user: UserModel) {
         
-        debugPrint(user.email)
+        
+        if let url = URL(string: user.picture?.medium ?? "") {
+            userPictureImageView.kf.setImage(with: url)
+        }
+        
+        
+        userPictureBorderView.clipsToBounds = true
+        userPictureBorderView.layer.cornerRadius = userPictureBorderView.frame.width / 2
+        userPictureBorderView.layer.borderWidth = 2
+        userPictureBorderView.layer.borderColor = UIColor.black.cgColor
+        
+        userPictureBorderView.clipsToBounds = true
+               userPictureBorderView.layer.cornerRadius = userPictureBorderView.frame.width / 2
+               userPictureBorderView.layer.borderWidth = 2
+               userPictureBorderView.layer.borderColor = UIColor.black.cgColor
+               
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
 }

@@ -17,6 +17,12 @@ class UsersListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var userNameTextLabel: UILabel!
     @IBOutlet weak var userLastNameTextLabel: UILabel!
     @IBOutlet weak var userMailTextLabel: UILabel!
+    @IBOutlet weak var onlineStatusView: UIView!
+    
+    
+    
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,8 +46,13 @@ class UsersListCollectionViewCell: UICollectionViewCell {
         
         avatarView.clipsToBounds = true
         avatarView.layer.cornerRadius = avatarView.frame.width / 2
-        
-        
+        avatarView.layer.borderColor = UIColor.black.cgColor
+        avatarView.layer.borderWidth = 1
+        avatarImageView.layer.cornerRadius = avatarView.frame.width / 2
+        avatarImageView.layer.borderColor = UIColor.gray.cgColor
+        avatarImageView.layer.borderWidth = 1
+        onlineStatusView.clipsToBounds = true
+        onlineStatusView.layer.cornerRadius = onlineStatusView.frame.width / 2
         
         
     }

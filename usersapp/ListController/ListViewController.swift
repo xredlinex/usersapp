@@ -74,9 +74,7 @@ extension ListViewController {
                     do {
                         let resultsModel = try JSONDecoder().decode(ResultsModel.self, from: data)
                         if let user = resultsModel.results  {
-                            for i in user {
-                                debugPrint(i.name?.first, i.name?.last)
-                            }
+                           
                             self.users.append(contentsOf: user)
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
