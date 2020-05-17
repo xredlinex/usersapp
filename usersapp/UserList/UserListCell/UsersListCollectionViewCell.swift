@@ -21,24 +21,35 @@ class UsersListCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
     
     func updateListCell(_ user: UserModel) {
         
+        setupCellUi(user.status)
+        
         if let url = URL(string: user.picture?.medium ?? "") {
             avatarImageView.kf.setImage(with: url)
         }
-        
         userNameTextLabel.text = user.name?.first ?? ""
         userLastNameTextLabel.text = user.name?.last ?? ""
         userMailTextLabel.text = user.email
-        
-//        let random = Bool.random()
-//        debugPrint(random)
+    }
+}
 
+extension UsersListCollectionViewCell {
+    
+    func setupCellUi(_ onlineStatus: Bool) {
+        
+        if !onlineStatus {
+            avatarView.layer.borderColor = UIColor.gray.cgColor
+            onlineStatusView.layer.backgroundColor = UIColor.gray.cgColor
+        } else {
+            avatarView.layer.borderColor = UIColor.green.cgColor
+            onlineStatusView.layer.backgroundColor = UIColor.green.cgColor
+        }
         avatarView.clipsToBounds = true
         avatarView.layer.cornerRadius = avatarView.frame.width / 2
-        avatarView.layer.borderColor = UIColor.black.cgColor
         avatarView.layer.borderWidth = 1
         avatarImageView.layer.cornerRadius = avatarView.frame.width / 2
         avatarImageView.layer.borderColor = UIColor.gray.cgColor

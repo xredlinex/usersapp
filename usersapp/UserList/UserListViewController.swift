@@ -60,5 +60,14 @@ class UserListViewController: UIViewController {
             break
         }
     }
+    
+    
+    @IBAction func didTapReloadUsersActioButton(_ sender: Any) {
+        
+        users.removeAll()
+        pageNumber = 1
+        isloaded = false
+        requestUsers()
+    }
 }
 
