@@ -25,7 +25,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahm-kX-YpQ">
                                         <rect key="frame" x="5" y="5" width="194" height="194"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IbS-hM-Bws">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IbS-hM-Bws">
                                                 <rect key="frame" x="0.0" y="0.0" width="194" height="194"/>
                                             </imageView>
                                         </subviews>
@@ -47,8 +47,8 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDs-xf-JBt">
-                                <rect key="frame" x="194" y="194" width="15" height="15"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="191" y="191" width="15" height="15"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="X0t-wj-ehX"/>
                                     <constraint firstAttribute="width" constant="15" id="ljg-4F-eFJ"/>
@@ -60,8 +60,8 @@
                             <constraint firstItem="u1j-u6-xMh" firstAttribute="leading" secondItem="JWh-eT-0XB" secondAttribute="leading" constant="10" id="3vs-ch-J7T"/>
                             <constraint firstAttribute="bottom" secondItem="u1j-u6-xMh" secondAttribute="bottom" constant="10" id="8dl-LY-jTi"/>
                             <constraint firstItem="u1j-u6-xMh" firstAttribute="top" secondItem="JWh-eT-0XB" secondAttribute="top" constant="10" id="OT2-sO-rUT"/>
-                            <constraint firstAttribute="bottom" secondItem="GDs-xf-JBt" secondAttribute="bottom" constant="15" id="WPg-XS-IM5"/>
-                            <constraint firstAttribute="trailing" secondItem="GDs-xf-JBt" secondAttribute="trailing" constant="15" id="cE8-71-E59"/>
+                            <constraint firstAttribute="bottom" secondItem="GDs-xf-JBt" secondAttribute="bottom" constant="18" id="WPg-XS-IM5"/>
+                            <constraint firstAttribute="trailing" secondItem="GDs-xf-JBt" secondAttribute="trailing" constant="18" id="cE8-71-E59"/>
                             <constraint firstAttribute="trailing" secondItem="u1j-u6-xMh" secondAttribute="trailing" constant="10" id="dol-uY-j3z"/>
                         </constraints>
                     </view>
