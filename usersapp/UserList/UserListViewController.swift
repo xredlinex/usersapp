@@ -14,6 +14,8 @@ class UserListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var users: [UserModel] = []
+    
+    var maxCount = 200
     var pageSize = 10
     var pageNumber = 1
     var isloaded = true

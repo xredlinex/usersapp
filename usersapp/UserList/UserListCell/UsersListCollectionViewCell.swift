@@ -19,15 +19,9 @@ class UsersListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var userMailTextLabel: UILabel!
     @IBOutlet weak var onlineStatusView: UIView!
     
-    
-    
-    
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
     
     func updateListCell(_ user: UserModel) {
         
@@ -41,9 +35,7 @@ class UsersListCollectionViewCell: UICollectionViewCell {
         
 //        let random = Bool.random()
 //        debugPrint(random)
-        
-        
-        
+
         avatarView.clipsToBounds = true
         avatarView.layer.cornerRadius = avatarView.frame.width / 2
         avatarView.layer.borderColor = UIColor.black.cgColor
@@ -53,7 +45,5 @@ class UsersListCollectionViewCell: UICollectionViewCell {
         avatarImageView.layer.borderWidth = 1
         onlineStatusView.clipsToBounds = true
         onlineStatusView.layer.cornerRadius = onlineStatusView.frame.width / 2
-        
-        
     }
 }

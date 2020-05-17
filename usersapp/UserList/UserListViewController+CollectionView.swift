@@ -34,8 +34,15 @@ extension UserListViewController: UICollectionViewDataSource, UICollectionViewDe
             return cell
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if users.count < maxCount && indexPath.row >= users.count - 1 {
+            pageNumber += 1
+            isloaded = false
+            requestUsers()
+        }
+    }
 }
-
 
 extension UserListViewController: UICollectionViewDelegateFlowLayout {
     

@@ -31,7 +31,7 @@
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mx-ZM-lwD">
                                         <rect key="frame" x="60" y="60" width="15" height="15"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="15" id="R9x-CG-Z1Q"/>
                                             <constraint firstAttribute="height" constant="15" id="yOy-bC-DBF"/>
