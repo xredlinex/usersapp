@@ -10,37 +10,19 @@ import UIKit
 
 extension UIView {
     
-    
-    
-    
     func setupBackGroundGradient(_ colors: [CGColor]) {
         
         let gradient = CAGradientLayer()
         gradient.colors = colors
         gradient.locations = [0.0, 1.0]
-        gradient.startPoint = CGPoint(x: 1.9, y: 0.0)
-        gradient.endPoint = CGPoint(x: 0.3, y: 2.0)
+        gradient.startPoint = CGPoint(x: 0.3, y: 0.9)
+        gradient.endPoint = CGPoint(x: 0.0, y: 0.0)
         gradient.frame = self.layer.frame
         self.layer.insertSublayer(gradient, at: 0)
     }
-    
-    
-    func clearButtonView() {
-        
 
-
-        
-        
-    }
-    
-    
-    
-    
-    
     func userBlurCell() {
-        
-
-        
+    
         let blurEffect = UIBlurEffect(style: .systemThinMaterialDark)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.translatesAutoresizingMaskIntoConstraints = false
@@ -59,4 +41,3 @@ extension UIView {
                                      blurView.widthAnchor.constraint(equalTo: self.widthAnchor)])
     }
 }
-
