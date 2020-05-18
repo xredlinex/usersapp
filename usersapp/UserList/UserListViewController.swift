@@ -21,7 +21,7 @@ class UserListViewController: UIViewController {
     var isloaded = true
     var isListView = true
     
-    var estimateWidth = 100.0
+    var estimateWidth = 100
     var cellMarginSize = 5
     
     override func viewDidLoad() {

@@ -12,49 +12,54 @@ import Kingfisher
 class UsersListCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cellView: UIView!
-    @IBOutlet weak var avatarView: UIView!
-    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var userPictureBorderView: UIView!
+    @IBOutlet weak var userPictureImageView: UIImageView!
     @IBOutlet weak var userNameTextLabel: UILabel!
     @IBOutlet weak var userLastNameTextLabel: UILabel!
-    @IBOutlet weak var userMailTextLabel: UILabel!
     @IBOutlet weak var onlineStatusView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
+        setupCellUi()
     }
     
     func updateListCell(_ user: UserModel) {
         
-        setupCellUi(user.status)
-        
         if let url = URL(string: user.picture?.medium ?? "") {
-            avatarImageView.kf.setImage(with: url)
+            userPictureImageView.kf.setImage(with: url)
         }
         userNameTextLabel.text = user.name?.first ?? ""
         userLastNameTextLabel.text = user.name?.last ?? ""
-        userMailTextLabel.text = user.email
+        
+        if !user.status {
+        setupOffline()
+        } else {
+            setupOnline()
+        }
     }
 }
 
 extension UsersListCollectionViewCell {
     
-    func setupCellUi(_ onlineStatus: Bool) {
+    func setupCellUi() {
         
-        if !onlineStatus {
-                   avatarView.layer.borderColor = UIColor.gray.cgColor
-                   onlineStatusView.layer.backgroundColor = UIColor.clear.cgColor
-               } else {
-                   avatarView.layer.borderColor = UIColor.green.cgColor
-                   onlineStatusView.layer.backgroundColor = UIColor.green.cgColor
-               }
-        avatarView.clipsToBounds = true
-        avatarView.layer.cornerRadius = avatarView.frame.width / 2
-        avatarView.layer.borderWidth = 1
-        avatarImageView.layer.cornerRadius = avatarImageView.frame.width / 2
-        avatarImageView.layer.borderColor = UIColor.gray.cgColor
-//        avatarImageView.layer.borderWidth = 1
+        userPictureBorderView.clipsToBounds = true
+        userPictureBorderView.layer.cornerRadius = userPictureBorderView.frame.width / 2
+        userPictureBorderView.layer.borderWidth = 2
+        userPictureImageView.layer.cornerRadius = userPictureImageView.frame.width / 2
         onlineStatusView.clipsToBounds = true
         onlineStatusView.layer.cornerRadius = onlineStatusView.frame.width / 2
     }
+    
+    func setupOnline() {
+        userPictureBorderView.layer.borderColor = UIColor.green.cgColor
+        onlineStatusView.layer.backgroundColor = UIColor.green.cgColor
+    }
+    
+    func setupOffline() {
+        userPictureBorderView.layer.borderColor = UIColor.clear.cgColor
+        onlineStatusView.layer.backgroundColor = UIColor.clear.cgColor
+    }
 }
+
