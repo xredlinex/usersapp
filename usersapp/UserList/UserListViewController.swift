@@ -13,6 +13,9 @@ class UserListViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var collectionView: UICollectionView!
     
+
+    
+    
     var users: [UserModel] = []
     
     var maxCount = 2000
@@ -42,13 +45,17 @@ class UserListViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+
+        
+        let gradientLayers = self.view.layer.sublayers?.compactMap { $0 as? CAGradientLayer }
+        gradientLayers?.first?.frame = self.view.bounds
         
         self.setupGridView()
+        
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
     }
-    
     
     @IBAction func didTapChangeSegmentedControl(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
@@ -76,14 +83,13 @@ class UserListViewController: UIViewController {
 extension UserListViewController {
     
     func setupBackground() {
-        
+    
         let colorOne = UIColor(red: 95/255, green: 96/255, blue: 100/255, alpha: 1).cgColor
         let colorTwo = UIColor(red: 40/255, green: 41/255, blue: 45/255, alpha: 1).cgColor
-        let colotThree = UIColor.red.cgColor
+        self.view.setupBackGroundGradient([colorTwo, colorOne])
         
-//        orange color 237 73 97
-        
-        self.view.setupBackGroundGradient([colorOne, colorTwo, colotThree])
-        
+
     }
 }
+
+

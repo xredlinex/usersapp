@@ -21,6 +21,10 @@
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CKw-Ej-aRJ">
                                         <rect key="frame" x="312" y="9.5" width="82" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="82" id="R9I-9J-WLQ"/>
+                                            <constraint firstAttribute="height" constant="31" id="lz6-MU-Zgk"/>
+                                        </constraints>
                                         <segments>
                                             <segment title="" image="list.dash" catalog="system"/>
                                             <segment title="" image="rectangle.grid.2x2" catalog="system"/>

@@ -11,6 +11,7 @@ import Kingfisher
 
 class UserGridCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var userPictureBorderView: UIView!
     @IBOutlet weak var userPictureView: UIView!
     @IBOutlet weak var userPictureImageView: UIImageView!
@@ -36,6 +37,7 @@ class UserGridCollectionViewCell: UICollectionViewCell {
         
         if !user.status {
             setupOnline()
+            
         } else {
             setupOffline()
         }
@@ -45,6 +47,15 @@ class UserGridCollectionViewCell: UICollectionViewCell {
 extension UserGridCollectionViewCell {
     
     func setupCellUi() {
+        
+        mainView.clipsToBounds = true
+        mainView.layer.cornerRadius = mainView.frame.width / 2
+        mainView.isOpaque = true
+        mainView.layer.masksToBounds = false
+        mainView.layer.shadowColor = UIColor.black.cgColor
+        mainView.layer.shadowOpacity = 0.5
+        mainView.layer.shadowOffset = CGSize(width: 5, height: 5)
+        mainView.layer.shadowRadius = 6
         
         userPictureBorderView.clipsToBounds = true
         userPictureBorderView.layer.cornerRadius = userPictureBorderView.frame.width / 2
@@ -64,14 +75,9 @@ extension UserGridCollectionViewCell {
         userPictureBorderView.layer.borderColor = UIColor.lightGray.cgColor
         onlineStatusView.layer.backgroundColor = UIColor.clear.cgColor
     }
-    //        orange color 237 73 97
+    
     func setupOffline() {
-//        userPictureBorderView.layer.borderColor = UIColor.green.cgColor
         userPictureBorderView.layer.borderColor = UIColor(red: 233/255, green: 80/255, blue: 38/255, alpha: 1).cgColor
-        
         onlineStatusView.layer.backgroundColor = UIColor(red: 233/255, green: 80/255, blue: 38/255, alpha: 1).cgColor
-        
-//       userPictureBorderView.bringSubviewToFront(onlineStatusView)
-        
     }
 }

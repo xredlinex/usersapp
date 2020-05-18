@@ -33,7 +33,7 @@ class UsersListCollectionViewCell: UICollectionViewCell {
         userLastNameTextLabel.text = user.name?.last ?? ""
         
         if !user.status {
-        setupOffline()
+            setupOffline()
         } else {
             setupOnline()
         }
