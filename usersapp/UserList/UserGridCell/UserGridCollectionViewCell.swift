@@ -70,5 +70,8 @@ extension UserGridCollectionViewCell {
         userPictureBorderView.layer.borderColor = UIColor(red: 233/255, green: 80/255, blue: 38/255, alpha: 1).cgColor
         
         onlineStatusView.layer.backgroundColor = UIColor(red: 233/255, green: 80/255, blue: 38/255, alpha: 1).cgColor
+        
+//       userPictureBorderView.bringSubviewToFront(onlineStatusView)
+        
     }
 }
