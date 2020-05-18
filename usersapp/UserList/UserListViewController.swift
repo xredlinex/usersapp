@@ -27,6 +27,8 @@ class UserListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupBackground()
+        
         if users.isEmpty {
             isloaded = false
             requestUsers()
@@ -71,3 +73,14 @@ class UserListViewController: UIViewController {
     }
 }
 
+extension UserListViewController {
+    
+    func setupBackground() {
+        
+        let colorOne = UIColor(red: 95/255, green: 96/255, blue: 100/255, alpha: 1).cgColor
+        let colorTwo = UIColor(red: 40/255, green: 41/255, blue: 45/255, alpha: 1).cgColor
+        
+        self.view.setupBackGroundGradient([colorOne, colorTwo])
+        
+    }
+}

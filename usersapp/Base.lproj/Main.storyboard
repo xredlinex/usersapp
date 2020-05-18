@@ -30,7 +30,7 @@
                                         </connections>
                                     </segmentedControl>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="CKw-Ej-aRJ" firstAttribute="centerY" secondItem="Xoc-2P-cba" secondAttribute="centerY" id="FAh-Lv-Cmn"/>
                                     <constraint firstAttribute="height" constant="50" id="Tgl-wq-Byw"/>
@@ -42,13 +42,15 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVE-Oq-LDV">
                                         <rect key="frame" x="147" y="10" width="120" height="30"/>
-                                        <state key="normal" title="Reload Users List"/>
+                                        <state key="normal" title="Reload Users List">
+                                            <color key="titleColor" red="0.84447634220000001" green="0.35551828149999998" blue="0.2117055357" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
                                         <connections>
                                             <action selector="didTapReloadUsersActioButton:" destination="lIr-ZX-Kgl" eventType="touchUpInside" id="1lJ-hR-72q"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BzY-IY-1si"/>
                                     <constraint firstItem="pVE-Oq-LDV" firstAttribute="centerX" secondItem="sUg-ar-eZV" secondAttribute="centerX" id="REO-3e-8Zr"/>
@@ -57,7 +59,7 @@
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yXV-VI-abH">
                                 <rect key="frame" x="0.0" y="94" width="414" height="718"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bjw-gn-WSZ">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
