@@ -11,6 +11,7 @@ import Kingfisher
 
 class UserGridCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var userPictureBorderView: UIView!
     @IBOutlet weak var userPictureView: UIView!
     @IBOutlet weak var userPictureImageView: UIImageView!
@@ -39,34 +40,5 @@ class UserGridCollectionViewCell: UICollectionViewCell {
         } else {
             setupOffline()
         }
-    }
-}
-
-extension UserGridCollectionViewCell {
-    
-    func setupCellUi() {
-        
-        userPictureBorderView.clipsToBounds = true
-        userPictureBorderView.layer.cornerRadius = userPictureBorderView.frame.width / 2
-        userPictureBorderView.layer.borderWidth = 2
-        userPictureView.clipsToBounds = true
-        userPictureView.layer.cornerRadius = userPictureView.frame.width / 2
-        onlineStatusView.clipsToBounds = true
-        onlineStatusView.layer.cornerRadius = onlineStatusView.frame.width / 2
-    }
-}
-
-
-extension UserGridCollectionViewCell {
-    
-    func setupOnline() {
-        userPictureBorderView.layer.borderWidth = 1
-        userPictureBorderView.layer.borderColor = UIColor.lightGray.cgColor
-        onlineStatusView.layer.backgroundColor = UIColor.clear.cgColor
-    }
-    
-    func setupOffline() {
-        userPictureBorderView.layer.borderColor = UIColor.green.cgColor
-        onlineStatusView.layer.backgroundColor = UIColor.green.cgColor
     }
 }

@@ -33,33 +33,9 @@ class UsersListCollectionViewCell: UICollectionViewCell {
         userLastNameTextLabel.text = user.name?.last ?? ""
         
         if !user.status {
-        setupOffline()
+            setupOffline()
         } else {
             setupOnline()
         }
     }
 }
-
-extension UsersListCollectionViewCell {
-    
-    func setupCellUi() {
-        
-        userPictureBorderView.clipsToBounds = true
-        userPictureBorderView.layer.cornerRadius = userPictureBorderView.frame.width / 2
-        userPictureBorderView.layer.borderWidth = 2
-        userPictureImageView.layer.cornerRadius = userPictureImageView.frame.width / 2
-        onlineStatusView.clipsToBounds = true
-        onlineStatusView.layer.cornerRadius = onlineStatusView.frame.width / 2
-    }
-    
-    func setupOnline() {
-        userPictureBorderView.layer.borderColor = UIColor.green.cgColor
-        onlineStatusView.layer.backgroundColor = UIColor.green.cgColor
-    }
-    
-    func setupOffline() {
-        userPictureBorderView.layer.borderColor = UIColor.clear.cgColor
-        onlineStatusView.layer.backgroundColor = UIColor.clear.cgColor
-    }
-}
-

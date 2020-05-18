@@ -27,12 +27,14 @@ class UserListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupBackground()
+        self.setupGridView()
+        
         if users.isEmpty {
             isloaded = false
             requestUsers()
         }
         
-        self.setupGridView()
         collectionView.register(UINib(nibName: "UsersListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UsersListCollectionViewCell")
         collectionView.register(UINib(nibName: "UserGridCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UserGridCollectionViewCell")
         collectionView.reloadData()
@@ -40,13 +42,16 @@ class UserListViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+
+        let gradientLayers = self.view.layer.sublayers?.compactMap { $0 as? CAGradientLayer }
+        gradientLayers?.first?.frame = self.view.bounds
         
         self.setupGridView()
+        
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
     }
-    
     
     @IBAction func didTapChangeSegmentedControl(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
@@ -61,13 +66,10 @@ class UserListViewController: UIViewController {
         }
     }
     
-    
     @IBAction func didTapReloadUsersActioButton(_ sender: Any) {
-        
         users.removeAll()
         pageNumber = 1
         isloaded = false
         requestUsers()
     }
 }
-
