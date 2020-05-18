@@ -43,6 +43,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVE-Oq-LDV">
                                         <rect key="frame" x="147" y="10" width="120" height="30"/>
                                         <state key="normal" title="Reload Users List"/>
+                                        <connections>
+                                            <action selector="didTapReloadUsersActioButton:" destination="lIr-ZX-Kgl" eventType="touchUpInside" id="1lJ-hR-72q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

@@ -15,13 +15,13 @@ class UserListViewController: UIViewController {
     
     var users: [UserModel] = []
     
-    var maxCount = 200
-    var pageSize = 10
+    var maxCount = 2000
+    var pageSize = 20
     var pageNumber = 1
     var isloaded = true
     var isListView = true
     
-    var estimateWidth = 100.0
+    var estimateWidth = 100
     var cellMarginSize = 5
     
     override func viewDidLoad() {
@@ -59,6 +59,15 @@ class UserListViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    
+    @IBAction func didTapReloadUsersActioButton(_ sender: Any) {
+        
+        users.removeAll()
+        pageNumber = 1
+        isloaded = false
+        requestUsers()
     }
 }
 

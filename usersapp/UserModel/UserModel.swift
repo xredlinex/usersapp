@@ -29,6 +29,7 @@ class ResultsModel: Codable {
 }
 
 class UserModel: Codable {
+    var status = Bool.random()
     var id: UserId?
     var gender: String?
     var name: UserName?
