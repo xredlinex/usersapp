@@ -64,9 +64,11 @@ extension UserGridCollectionViewCell {
         userPictureBorderView.layer.borderColor = UIColor.lightGray.cgColor
         onlineStatusView.layer.backgroundColor = UIColor.clear.cgColor
     }
-    
+    //        orange color 237 73 97
     func setupOffline() {
-        userPictureBorderView.layer.borderColor = UIColor.green.cgColor
-        onlineStatusView.layer.backgroundColor = UIColor.green.cgColor
+//        userPictureBorderView.layer.borderColor = UIColor.green.cgColor
+        userPictureBorderView.layer.borderColor = UIColor(red: 237/255, green: 73/255, blue: 97/255, alpha: 1).cgColor
+        
+        onlineStatusView.layer.backgroundColor = UIColor(red: 237/255, green: 73/255, blue: 97/255, alpha: 1).cgColor
     }
 }

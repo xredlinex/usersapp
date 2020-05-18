@@ -43,7 +43,7 @@ class UsersListCollectionViewCell: UICollectionViewCell {
 extension UsersListCollectionViewCell {
     
     func setupCellUi() {
-        
+        cellView.userBlurCell()
         userPictureBorderView.clipsToBounds = true
         userPictureBorderView.layer.cornerRadius = userPictureBorderView.frame.width / 2
         userPictureBorderView.layer.borderWidth = 2
@@ -53,8 +53,8 @@ extension UsersListCollectionViewCell {
     }
     
     func setupOnline() {
-        userPictureBorderView.layer.borderColor = UIColor.green.cgColor
-        onlineStatusView.layer.backgroundColor = UIColor.green.cgColor
+        userPictureBorderView.layer.borderColor = UIColor(red: 233/255, green: 80/255, blue: 38/255, alpha: 1).cgColor
+        onlineStatusView.layer.backgroundColor = UIColor(red: 233/255, green: 80/255, blue: 38/255, alpha: 1).cgColor
     }
     
     func setupOffline() {
