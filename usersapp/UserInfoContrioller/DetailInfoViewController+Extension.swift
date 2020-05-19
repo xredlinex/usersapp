@@ -12,23 +12,74 @@ import MessageUI
 extension DetailInfoViewController {
     
     func setupBackground() {
-           let colorOne = UIColor(red: 95/255, green: 96/255, blue: 100/255, alpha: 1).cgColor
-           let colorTwo = UIColor(red: 40/255, green: 41/255, blue: 45/255, alpha: 1).cgColor
-           self.view.setupBackGroundGradient([colorTwo, colorOne])
-       }
+        let colorOne = UIColor(red: 95/255, green: 96/255, blue: 100/255, alpha: 1).cgColor
+        let colorTwo = UIColor(red: 40/255, green: 41/255, blue: 45/255, alpha: 1).cgColor
+        self.view.setupBackGroundGradient([colorTwo, colorOne])
+    }
 }
-
-
-
-
-
-
-
-
-
-
 
 extension DetailInfoViewController {
     
-   
+    func makeCall(_ phomeNubmer: String) {
+        
+        guard let number = URL(string: "tel://" + phomeNubmer) else { return }
+        UIApplication.shared.open(number)
+    }
+    
+    func sendMessage(_ phoneNumber: String) {
+        
+        if MFMessageComposeViewController.canSendText() {
+            let message = MFMessageComposeViewController()
+            message.messageComposeDelegate = self
+            message.recipients = [phoneNumber]
+            present(message, animated: true, completion: nil)
+        }
+    }
+    
+    func sendMail(_ userEmail: String) {
+        
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([userEmail])
+            mail.setSubject("Hello and Welcome")
+            present(mail, animated: true, completion: nil)
+        }
+    }
+}
+
+extension DetailInfoViewController: MFMessageComposeViewControllerDelegate {
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        switch result {
+        case .cancelled:
+            debugPrint("canceled")
+        case .failed:
+            debugPrint("failed")
+        case .sent:
+            debugPrint("sent")
+        default:
+            debugPrint("something wrong")
+        }
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension DetailInfoViewController: MFMailComposeViewControllerDelegate {
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch result {
+        case .cancelled:
+            debugPrint("mail cancelled")
+        case .failed:
+            debugPrint("mail failed")
+        case .sent:
+            debugPrint("mail sent")
+        case .saved:
+            debugPrint("mail saved")
+        default:
+            debugPrint("something wrong")
+        }
+        controller.dismiss(animated: true, completion: nil)
+    }
 }

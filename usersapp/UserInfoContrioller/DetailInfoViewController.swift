@@ -11,7 +11,7 @@ import UIKit
 class DetailInfoViewController: UIViewController {
     
     
-    var user = UserModel()
+    var user: UserModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +25,8 @@ class DetailInfoViewController: UIViewController {
     }
     
     @IBAction func didTapSendMessageActionButton(_ sender: Any) {
+        if let number = user?.cell {
+            sendMessage(number)
+        }
     }
 }
