@@ -101,6 +101,7 @@
 				97A672DA246EB67B0030E7C2 /* AppDelegate.swift */,
 				97A672DC246EB67B0030E7C2 /* SceneDelegate.swift */,
 				97A672E0246EB67B0030E7C2 /* Main.storyboard */,
+				97D9BD302473D7EC00455955 /* UIExtension */,
 				97D39EDC246F2E6400DC4C2B /* UserModel */,
 				97D39EFE24702AC000DC4C2B /* UserListController */,
 				971591BF2473CE1600B76A50 /* UserInfoContrioller */,
@@ -114,7 +115,6 @@
 		97D39EDC246F2E6400DC4C2B /* UserModel */ = {
 			isa = PBXGroup;
 			children = (
-				973E2C7E2471B98400DAFEF6 /* UIView+Extension.swift */,
 				97D39EDA246F2E5E00DC4C2B /* UserModel.swift */,
 			);
 			path = UserModel;
@@ -151,6 +151,14 @@
 				97D39F07247045C700DC4C2B /* UserGridCollectionViewCell.xib */,
 			);
 			path = UserGridCell;
+			sourceTree = "<group>";
+		};
+		97D9BD302473D7EC00455955 /* UIExtension */ = {
+			isa = PBXGroup;
+			children = (
+				973E2C7E2471B98400DAFEF6 /* UIView+Extension.swift */,
+			);
+			path = UIExtension;
 			sourceTree = "<group>";
 		};
 		D0BBF0F4DB98DD5570CA13AE /* Pods */ = {
