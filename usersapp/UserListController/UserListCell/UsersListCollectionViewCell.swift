@@ -25,7 +25,6 @@ class UsersListCollectionViewCell: UICollectionViewCell {
     }
     
     func updateListCell(_ user: UserModel) {
-        
         if let url = URL(string: user.picture?.medium ?? "") {
             userPictureImageView.kf.setImage(with: url)
         }

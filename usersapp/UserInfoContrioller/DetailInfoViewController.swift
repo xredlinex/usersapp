@@ -13,6 +13,8 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var userPictureBorderView: UIView!
     @IBOutlet weak var userPictureFrameView: UIView!
     @IBOutlet weak var userPictureImageView: UIImageView!
+    @IBOutlet weak var userNameTextLabel: UILabel!
+    @IBOutlet weak var userLocationTextLabel: UILabel!
     
     var user: UserModel?
     
@@ -37,7 +39,6 @@ class DetailInfoViewController: UIViewController {
     }
 }
 
-
 extension DetailInfoViewController {
     
     func updateUserInfo(_ user: UserModel) {
@@ -45,6 +46,7 @@ extension DetailInfoViewController {
         if let userPictureUrl = URL(string: user.picture?.large ?? "") {
             userPictureImageView.kf.setImage(with: userPictureUrl)
         }
-        
+        userNameTextLabel.text = "\(user.name?.first ?? "") \(user.name?.last ?? "")"
+        userLocationTextLabel.text = "\(user.location?.city ?? ""), \(user.location?.state ?? "")"
     }
 }
