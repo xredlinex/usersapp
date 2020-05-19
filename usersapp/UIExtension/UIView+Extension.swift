@@ -41,3 +41,26 @@ extension UIView {
                                      blurView.widthAnchor.constraint(equalTo: self.widthAnchor)])
     }
 }
+
+extension UIView {
+    
+    func setupGradientBorder(colors: [CGColor]) {
+        
+        let view = self
+        let lineWidth: CGFloat = 8
+        let rect = view.bounds.insetBy(dx: lineWidth / 2, dy: lineWidth / 2)
+        let path = UIBezierPath(roundedRect: rect, cornerRadius: view.frame.width / 2)
+        let gradiet = CAGradientLayer()
+        gradiet.frame = CGRect(origin: CGPoint.zero, size: view.frame.size)
+        gradiet.colors = colors
+        gradiet.startPoint = CGPoint(x: 0, y: 0.5)
+        gradiet.endPoint = CGPoint(x: 1, y: 0.5)
+        let shape = CAShapeLayer()
+        shape.lineWidth = lineWidth
+        shape.path = path.cgPath
+        shape.strokeColor = UIColor.black.cgColor
+        shape.fillColor = UIColor.clear.cgColor
+        gradiet.mask = shape
+        view.layer.addSublayer(gradiet)
+    }
+}

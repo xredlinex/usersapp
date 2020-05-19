@@ -188,10 +188,18 @@
                                                             <constraint firstItem="9uv-aR-rrw" firstAttribute="top" secondItem="yeb-w6-SJI" secondAttribute="top" id="sMX-dY-IlM"/>
                                                         </constraints>
                                                     </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P r o f i l e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Us2-zk-dRG">
+                                                        <rect key="frame" x="168" y="19" width="78" height="21"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="Us2-zk-dRG" firstAttribute="centerY" secondItem="LNG-e0-rIg" secondAttribute="centerY" id="27N-OF-mVH"/>
                                                     <constraint firstAttribute="bottom" secondItem="WDe-Od-QQ5" secondAttribute="bottom" id="9Wh-Xe-DhR"/>
+                                                    <constraint firstItem="Us2-zk-dRG" firstAttribute="centerX" secondItem="LNG-e0-rIg" secondAttribute="centerX" id="EYH-oB-wHf"/>
                                                     <constraint firstItem="yeb-w6-SJI" firstAttribute="top" secondItem="LNG-e0-rIg" secondAttribute="top" id="GuY-Fy-gHc"/>
                                                     <constraint firstAttribute="trailing" secondItem="yeb-w6-SJI" secondAttribute="trailing" id="HFa-sx-NLm"/>
                                                     <constraint firstItem="WDe-Od-QQ5" firstAttribute="top" secondItem="LNG-e0-rIg" secondAttribute="top" id="Keu-0W-sz2"/>
@@ -200,10 +208,41 @@
                                                     <constraint firstItem="WDe-Od-QQ5" firstAttribute="leading" secondItem="LNG-e0-rIg" secondAttribute="leading" id="jla-cn-2e1"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7t-80-68P">
+                                                <rect key="frame" x="112" y="109" width="190" height="190"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XK8-eu-NpQ">
+                                                        <rect key="frame" x="10" y="10" width="170" height="170"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9M3-TO-fe8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" red="0.89707785839999998" green="0.45355504749999997" blue="0.22336184980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="9M3-TO-fe8" firstAttribute="leading" secondItem="XK8-eu-NpQ" secondAttribute="leading" id="I3F-Pk-dcu"/>
+                                                            <constraint firstAttribute="trailing" secondItem="9M3-TO-fe8" secondAttribute="trailing" id="aih-5c-X0G"/>
+                                                            <constraint firstAttribute="bottom" secondItem="9M3-TO-fe8" secondAttribute="bottom" id="ckv-Bf-4X3"/>
+                                                            <constraint firstItem="9M3-TO-fe8" firstAttribute="top" secondItem="XK8-eu-NpQ" secondAttribute="top" id="jF6-Nl-tCw"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="190" id="8hj-Mz-rYL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XK8-eu-NpQ" secondAttribute="bottom" constant="10" id="B4A-PS-RSj"/>
+                                                    <constraint firstItem="XK8-eu-NpQ" firstAttribute="top" secondItem="U7t-80-68P" secondAttribute="top" constant="10" id="bAd-tk-ymg"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XK8-eu-NpQ" secondAttribute="trailing" constant="10" id="eFI-ET-lRa"/>
+                                                    <constraint firstAttribute="height" constant="190" id="ge0-1h-mA8"/>
+                                                    <constraint firstItem="XK8-eu-NpQ" firstAttribute="leading" secondItem="U7t-80-68P" secondAttribute="leading" constant="10" id="mX0-DS-lwi"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="U7t-80-68P" firstAttribute="centerX" secondItem="ezq-M0-89y" secondAttribute="centerX" id="1uj-GR-sk8"/>
                                             <constraint firstItem="LNG-e0-rIg" firstAttribute="top" secondItem="ezq-M0-89y" secondAttribute="top" id="2og-hh-FQe"/>
+                                            <constraint firstItem="U7t-80-68P" firstAttribute="top" secondItem="LNG-e0-rIg" secondAttribute="bottom" constant="50" id="Ti5-dh-gGN"/>
                                             <constraint firstAttribute="trailing" secondItem="LNG-e0-rIg" secondAttribute="trailing" id="oCE-pV-3np"/>
                                             <constraint firstItem="LNG-e0-rIg" firstAttribute="leading" secondItem="ezq-M0-89y" secondAttribute="leading" id="q9N-HP-9c2"/>
                                         </constraints>
@@ -228,6 +267,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RaS-ot-hzs"/>
                     </view>
+                    <connections>
+                        <outlet property="userPictureBorderView" destination="U7t-80-68P" id="jx2-Cy-YLi"/>
+                        <outlet property="userPictureFrameView" destination="XK8-eu-NpQ" id="gCC-9h-WKK"/>
+                        <outlet property="userPictureImageView" destination="9M3-TO-fe8" id="zra-Dv-igy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swe-NQ-Ndm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
