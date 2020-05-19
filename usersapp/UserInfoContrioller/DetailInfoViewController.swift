@@ -18,12 +18,13 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var userInfoView: UIView!
     @IBOutlet weak var userOnlineStatusView: UIView!
     @IBOutlet weak var userOnlineStatusTextLabel: UILabel!
+    @IBOutlet weak var userOnlineShadowView: UIView!
     
     var user: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupBackground()
         
         if let userInfo = user {
@@ -38,8 +39,6 @@ class DetailInfoViewController: UIViewController {
         
         let gradientLayers = self.view.layer.sublayers?.compactMap { $0 as? CAGradientLayer }
         gradientLayers?.first?.frame = self.view.bounds
-        
-        userOnlineStatusView.viewStatusView(colors: [UIColor.red.cgColor, UIColor.yellow.cgColor])
     }
     
     @IBAction func didTapBackActionButton(_ sender: Any) {
@@ -64,24 +63,23 @@ extension DetailInfoViewController {
         userLocationTextLabel.text = "\(user.location?.city ?? ""), \(user.location?.state ?? "")"
         
         userOnlineStatusTextLabel.text = user.status ? "online" : "offline"
-        
-        
-        
+        userNetworkStatus(status: user.status)
     }
 }
 
-
 extension DetailInfoViewController {
     
-    func userOnlineStatus(userStatus: Bool) {
+    func userNetworkStatus(status: Bool) {
         
-        if !userStatus {
-            
-            userOnlineStatusView.setupBackGroundGradient([UIColor.black.cgColor, UIColor.gray.cgColor])
-            
-            
+        let colorBorderOne = UIColor(red: 233/255, green: 80/255, blue: 38/255, alpha: 1).cgColor
+        let colorBorderTwo = UIColor(red: 229/255, green: 60/255, blue: 57/255, alpha: 1).cgColor
+        let colorBorderThree = UIColor(red: 229/255, green: 116/255, blue: 57/255, alpha: 1).cgColor
+        
+        if !status {
+            userOnlineStatusView.userBlurCell()
         } else {
-            userOnlineStatusView.setupBackGroundGradient([UIColor.red.cgColor, UIColor.yellow.cgColor])
+            userOnlineStatusView.viewStatusView(colors: [colorBorderOne, colorBorderTwo, colorBorderThree])
+            userOnlineShadowView.viewShadowView()
         }
     }
 }

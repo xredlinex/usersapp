@@ -15,34 +15,16 @@ extension DetailInfoViewController {
         
         let colorBackgroundOne = UIColor(red: 95/255, green: 96/255, blue: 100/255, alpha: 1).cgColor
         let colorBackgroundTwo = UIColor(red: 40/255, green: 41/255, blue: 45/255, alpha: 1).cgColor
-        
-        self.view.setupBackGroundGradient([colorBackgroundOne, colorBackgroundTwo])
-        
-        userPictureFrameView.contentMode = .scaleAspectFill
-        userPictureFrameView.clipsToBounds = true
-        userPictureFrameView.layer.cornerRadius = userPictureFrameView.frame.width / 2
-        
         let colorBorderOne = UIColor(red: 233/255, green: 80/255, blue: 38/255, alpha: 1).cgColor
         let colorBorderTwo = UIColor(red: 229/255, green: 60/255, blue: 57/255, alpha: 1).cgColor
         let colorBorderThree = UIColor(red: 229/255, green: 116/255, blue: 57/255, alpha: 1).cgColor
         
+        self.view.setupBackGroundGradient([colorBackgroundOne, colorBackgroundTwo])
+        userPictureFrameView.contentMode = .scaleAspectFill
+        userPictureFrameView.clipsToBounds = true
+        userPictureFrameView.layer.cornerRadius = userPictureFrameView.frame.width / 2
         userPictureBorderView.setupGradientBorder(colors: [colorBorderOne, colorBorderTwo, colorBorderThree])
         userInfoView.userBlurCell()
-        
-        
-//        userOnlineStatusView.viewStatusView(colors: [colorBorderOne, colorBorderTwo])
-        
-        
-        
-//        add this of user offline   ->>>>>>> its work but add corner radius ----
-//        userOnlineStatusView.userBlurCell()
-        
-        
-        
-        
-        
-        
-        
     }
 }
 

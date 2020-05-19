@@ -20,9 +20,9 @@ extension UIView {
         gradient.frame = self.layer.frame
         self.layer.insertSublayer(gradient, at: 0)
     }
-
-    func userBlurCell() {
     
+    func userBlurCell() {
+        
         let blurEffect = UIBlurEffect(style: .systemThinMaterialDark)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.translatesAutoresizingMaskIntoConstraints = false
@@ -75,19 +75,27 @@ extension UIView {
         layer.mask = mask
     }
     
-    
     func viewStatusView(colors: [CGColor]) {
         
-//        let view = UIView()
-//        let gradient = CAGradientLayer()
-//        gradient.colors = colors
-//        gradient.locations = [0.0, 1.0]
-//        gradient.startPoint = CGPoint(x: 0.3, y: 0.9)
-//        gradient.endPoint = CGPoint(x: 0.0, y: 0.0)
-//        gradient.frame = view.layer.frame
-//        view.layer.insertSublayer(gradient, at: 0)
+        let gradient: CAGradientLayer = CAGradientLayer()
+        self.clipsToBounds = true
+        self.layer.cornerRadius = 12
+        gradient.colors = colors
+        gradient.locations = [0.0 , 1.0]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 0.5, y: 0.3)
+        gradient.frame = self.layer.bounds
+        self.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    func viewShadowView() {
         
-
-
+        self.layer.cornerRadius = 12
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOpacity = 0.3
+        self.layer.shadowOffset = CGSize(width: 7, height: 7)
+        self.layer.shadowRadius = 6
+        self.isOpaque = true
     }
 }
