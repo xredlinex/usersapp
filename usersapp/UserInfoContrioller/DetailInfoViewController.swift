@@ -15,6 +15,9 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var userPictureImageView: UIImageView!
     @IBOutlet weak var userNameTextLabel: UILabel!
     @IBOutlet weak var userLocationTextLabel: UILabel!
+    @IBOutlet weak var userInfoView: UIView!
+    @IBOutlet weak var userOnlineStatusView: UIView!
+    @IBOutlet weak var userOnlineStatusTextLabel: UILabel!
     
     var user: UserModel?
     
@@ -26,6 +29,17 @@ class DetailInfoViewController: UIViewController {
         if let userInfo = user {
             updateUserInfo(userInfo)
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        userInfoView.cornerRadiusView(corners: [.topLeft, .topRight], radius: 20)
+        
+        let gradientLayers = self.view.layer.sublayers?.compactMap { $0 as? CAGradientLayer }
+        gradientLayers?.first?.frame = self.view.bounds
+        
+        userOnlineStatusView.viewStatusView(colors: [UIColor.red.cgColor, UIColor.yellow.cgColor])
     }
     
     @IBAction func didTapBackActionButton(_ sender: Any) {
@@ -48,5 +62,26 @@ extension DetailInfoViewController {
         }
         userNameTextLabel.text = "\(user.name?.first ?? "") \(user.name?.last ?? "")"
         userLocationTextLabel.text = "\(user.location?.city ?? ""), \(user.location?.state ?? "")"
+        
+        userOnlineStatusTextLabel.text = user.status ? "online" : "offline"
+        
+        
+        
+    }
+}
+
+
+extension DetailInfoViewController {
+    
+    func userOnlineStatus(userStatus: Bool) {
+        
+        if !userStatus {
+            
+            userOnlineStatusView.setupBackGroundGradient([UIColor.black.cgColor, UIColor.gray.cgColor])
+            
+            
+        } else {
+            userOnlineStatusView.setupBackGroundGradient([UIColor.red.cgColor, UIColor.yellow.cgColor])
+        }
     }
 }

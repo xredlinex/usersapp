@@ -27,6 +27,22 @@ extension DetailInfoViewController {
         let colorBorderThree = UIColor(red: 229/255, green: 116/255, blue: 57/255, alpha: 1).cgColor
         
         userPictureBorderView.setupGradientBorder(colors: [colorBorderOne, colorBorderTwo, colorBorderThree])
+        userInfoView.userBlurCell()
+        
+        
+//        userOnlineStatusView.viewStatusView(colors: [colorBorderOne, colorBorderTwo])
+        
+        
+        
+//        add this of user offline   ->>>>>>> its work but add corner radius ----
+//        userOnlineStatusView.userBlurCell()
+        
+        
+        
+        
+        
+        
+        
     }
 }
 

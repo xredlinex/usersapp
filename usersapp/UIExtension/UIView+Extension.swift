@@ -64,3 +64,30 @@ extension UIView {
         view.layer.addSublayer(gradiet)
     }
 }
+
+extension UIView {
+    
+    func cornerRadiusView(corners: UIRectCorner, radius: CGFloat) {
+        
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+    
+    
+    func viewStatusView(colors: [CGColor]) {
+        
+//        let view = UIView()
+//        let gradient = CAGradientLayer()
+//        gradient.colors = colors
+//        gradient.locations = [0.0, 1.0]
+//        gradient.startPoint = CGPoint(x: 0.3, y: 0.9)
+//        gradient.endPoint = CGPoint(x: 0.0, y: 0.0)
+//        gradient.frame = view.layer.frame
+//        view.layer.insertSublayer(gradient, at: 0)
+        
+
+
+    }
+}
