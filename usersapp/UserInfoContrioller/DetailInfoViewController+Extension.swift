@@ -8,6 +8,35 @@
 
 import UIKit
 import MessageUI
+import FlagKit
+
+extension DetailInfoViewController {
+    
+    func updateUserInfo(_ user: UserModel) {
+        
+        guard let state = user.location?.state, let city = user.location?.city, let street = user.location?.street?.name, let numberStreet = user.location?.street?.number else { return }
+        if let userPictureUrl = URL(string: user.picture?.large ?? "") {
+            userPictureImageView.kf.setImage(with: userPictureUrl)
+        }
+        userNameTextLabel.text = "\(user.name?.first ?? "") \(user.name?.last ?? "")"
+        userLocationTextLabel.text = "\(city), \(state)"
+        userOnlineStatusTextLabel.text = user.status ? "online" : "offline"
+        userLoginNameTextLabel.text = user.login?.username ?? ""
+        userEmailTextField.text = user.email ?? ""
+        userPhoneNumber.text = user.phone ?? ""
+        userDateOfBirthTextLabel.text = convertDate(user.dob?.date ?? "")
+        userLocationAddressTextLabel.text = "\(numberStreet) \(street), \(city)"
+        
+        let flag = Flag(countryCode: user.nat)
+        nationalityImageView.image = flag?.image(style: .circle)
+        
+        if let nationality = (Locale.current as NSLocale).displayName(forKey: .countryCode, value: user.nat) {
+            natioonalityTextLabel.text = nationality
+        } else {
+            natioonalityTextLabel.text = ""
+        }
+    }
+}
 
 extension DetailInfoViewController {
     
@@ -101,7 +130,6 @@ extension DetailInfoViewController: MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
 }
-
 
 extension DetailInfoViewController {
     
