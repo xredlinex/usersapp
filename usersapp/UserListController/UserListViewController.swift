@@ -15,8 +15,8 @@ class UserListViewController: UIViewController {
     
     var users: [UserModel] = []
     
-    var maxCount = 2000
-    var pageSize = 20
+    var maxCount = 200
+    var pageSize = 10
     var pageNumber = 1
     var isloaded = true
     var isListView = true

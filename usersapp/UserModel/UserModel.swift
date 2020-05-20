@@ -35,9 +35,21 @@ class UserModel: Codable {
     var name: UserName?
     var email: String?
     var picture: UserPicture?
+    var phone: String?
+    var cell: String
+    var location: UserLocation?
     
     enum CodingKeys: String, CodingKey {
-        case id, gender, name, email, picture
+        case id, gender, name, email, picture, phone, cell, location
+    }
+}
+
+class UserLocation: Codable {
+    var city: String?
+    var state: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case city, state
     }
 }
 

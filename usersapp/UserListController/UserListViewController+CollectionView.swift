@@ -42,6 +42,13 @@ extension UserListViewController: UICollectionViewDataSource, UICollectionViewDe
             requestUsers()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailInfoViewController") as! DetailInfoViewController
+        viewController.user = users[indexPath.row]
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 }
 
 extension UserListViewController: UICollectionViewDelegateFlowLayout {
