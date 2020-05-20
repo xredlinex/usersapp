@@ -11,7 +11,7 @@ import MessageUI
 
 extension DetailInfoViewController {
     
-    func setupBackground() {
+    func setupBackground(status: Bool) {
         
         let colorBackgroundOne = UIColor(red: 95/255, green: 96/255, blue: 100/255, alpha: 1).cgColor
         let colorBackgroundTwo = UIColor(red: 40/255, green: 41/255, blue: 45/255, alpha: 1).cgColor
@@ -20,11 +20,19 @@ extension DetailInfoViewController {
         let colorBorderThree = UIColor(red: 229/255, green: 116/255, blue: 57/255, alpha: 1).cgColor
         
         self.view.setupBackGroundGradient([colorBackgroundOne, colorBackgroundTwo])
+        userInfoView.userBlurCell()
         userPictureFrameView.contentMode = .scaleAspectFill
         userPictureFrameView.clipsToBounds = true
         userPictureFrameView.layer.cornerRadius = userPictureFrameView.frame.width / 2
-        userPictureBorderView.setupGradientBorder(colors: [colorBorderOne, colorBorderTwo, colorBorderThree])
-        userInfoView.userBlurCell()
+        
+        if !status {
+            userOnlineStatusView.userBlurCell()
+            userPictureBorderView.setupGradientBorder(colors: [colorBackgroundOne, colorBackgroundTwo])
+        } else {
+            userOnlineStatusView.viewStatusView(colors: [colorBorderOne, colorBorderTwo, colorBorderThree])
+            userPictureBorderView.setupGradientBorder(colors: [colorBorderOne, colorBorderTwo, colorBorderThree])
+            userOnlineShadowView.viewShadowView()
+        }
     }
 }
 

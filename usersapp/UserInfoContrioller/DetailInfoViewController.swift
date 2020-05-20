@@ -25,10 +25,11 @@ class DetailInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupBackground()
-        
         if let userInfo = user {
             updateUserInfo(userInfo)
+            setupBackground(status: userInfo.status)
+        } else {
+            navigationController?.popViewController(animated: false)
         }
     }
     
@@ -61,25 +62,9 @@ extension DetailInfoViewController {
         }
         userNameTextLabel.text = "\(user.name?.first ?? "") \(user.name?.last ?? "")"
         userLocationTextLabel.text = "\(user.location?.city ?? ""), \(user.location?.state ?? "")"
-        
         userOnlineStatusTextLabel.text = user.status ? "online" : "offline"
-        userNetworkStatus(status: user.status)
+        
     }
 }
 
-extension DetailInfoViewController {
-    
-    func userNetworkStatus(status: Bool) {
-        
-        let colorBorderOne = UIColor(red: 233/255, green: 80/255, blue: 38/255, alpha: 1).cgColor
-        let colorBorderTwo = UIColor(red: 229/255, green: 60/255, blue: 57/255, alpha: 1).cgColor
-        let colorBorderThree = UIColor(red: 229/255, green: 116/255, blue: 57/255, alpha: 1).cgColor
-        
-        if !status {
-            userOnlineStatusView.userBlurCell()
-        } else {
-            userOnlineStatusView.viewStatusView(colors: [colorBorderOne, colorBorderTwo, colorBorderThree])
-            userOnlineShadowView.viewShadowView()
-        }
-    }
-}
+
