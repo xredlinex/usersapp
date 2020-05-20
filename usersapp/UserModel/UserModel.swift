@@ -38,18 +38,12 @@ class UserModel: Codable {
     var phone: String?
     var cell: String
     var location: UserLocation?
+    var login: UserLogin?
+    var dob: UserDateOfBirth?
+    var nat: String
     
     enum CodingKeys: String, CodingKey {
-        case id, gender, name, email, picture, phone, cell, location
-    }
-}
-
-class UserLocation: Codable {
-    var city: String?
-    var state: String?
-    
-    enum CodingKeys: String, CodingKey {
-        case city, state
+        case id, gender, name, email, picture, phone, cell, location, login, dob, nat
     }
 }
 
@@ -79,5 +73,41 @@ class UserPicture: Codable {
     
     enum CodingKeys: String, CodingKey {
         case large, medium, thumbnail
+    }
+}
+
+class UserLocation: Codable {
+    var street: UserStreet?
+    var city: String?
+    var state: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case street, city, state
+    }
+}
+
+class UserStreet: Codable {
+    var number: Int?
+    var name: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case number, name
+    }
+}
+
+class UserLogin: Codable {
+    var username: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case username
+    }
+}
+
+class UserDateOfBirth: Codable {
+    var date: String?
+    var age: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case date, age
     }
 }

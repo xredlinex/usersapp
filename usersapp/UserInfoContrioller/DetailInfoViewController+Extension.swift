@@ -101,3 +101,20 @@ extension DetailInfoViewController: MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
 }
+
+
+extension DetailInfoViewController {
+    
+    func convertDate(_ date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.calendar = Calendar(identifier: .iso8601)
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        let format = DateFormatter()
+        format.dateFormat = "MMM d, yyyy"
+        if let date = dateFormatter.date(from: date) {
+            return format.string(from: date)
+        } else {
+            return "----"
+        }
+    }
+}

@@ -7,7 +7,6 @@ target 'usersapp' do
   pod 'Kingfisher'
   pod 'Alamofire'
 
-
   # Pods for usersapp
 
 end
