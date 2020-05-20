@@ -6,6 +6,7 @@ target 'usersapp' do
 
   pod 'Kingfisher'
   pod 'Alamofire'
+  pod 'FlagKit'
 
   # Pods for usersapp
 

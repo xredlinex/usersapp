@@ -8,6 +8,8 @@
 
 
 import UIKit
+import FlagKit
+
 
 class DetailInfoViewController: UIViewController {
     
@@ -26,6 +28,8 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var userDateOfBirthTextLabel: UILabel!
     @IBOutlet weak var userLocationAddressTextLabel: UILabel!
     @IBOutlet weak var nationalityImageView: UIImageView!
+    @IBOutlet weak var natioonalityTextLabel: UILabel!
+    
     
     var user: UserModel?
     
@@ -76,6 +80,18 @@ extension DetailInfoViewController {
         userPhoneNumber.text = user.phone ?? ""
         userDateOfBirthTextLabel.text = convertDate(user.dob?.date ?? "")
         userLocationAddressTextLabel.text = "\(numberStreet) \(street), \(city)"
+        
+        let flag = Flag(countryCode: user.nat)
+        nationalityImageView.image = flag?.image(style: .circle)
+        
+        if let nationality = (Locale.current as NSLocale).displayName(forKey: .countryCode, value: user.nat) {
+            natioonalityTextLabel.text = nationality
+        } else {
+            natioonalityTextLabel.text = ""
+        }
+        
+        
+        
     }
 }
 
