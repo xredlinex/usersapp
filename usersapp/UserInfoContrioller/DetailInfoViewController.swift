@@ -30,7 +30,6 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var nationalityImageView: UIImageView!
     @IBOutlet weak var natioonalityTextLabel: UILabel!
     
-    
     var user: UserModel?
     
     override func viewDidLoad() {

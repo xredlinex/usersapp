@@ -20,7 +20,6 @@ extension UserGridCollectionViewCell {
         mainView.layer.shadowOpacity = 0.5
         mainView.layer.shadowOffset = CGSize(width: 5, height: 5)
         mainView.layer.shadowRadius = 6
-        
         userPictureBorderView.clipsToBounds = true
         userPictureBorderView.layer.cornerRadius = userPictureBorderView.frame.width / 2
         userPictureBorderView.layer.borderWidth = 2

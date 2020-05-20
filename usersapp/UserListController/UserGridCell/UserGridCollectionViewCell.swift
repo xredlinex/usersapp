@@ -34,11 +34,6 @@ class UserGridCollectionViewCell: UICollectionViewCell {
         if let url = URL(string: user.picture?.medium ?? "") {
             userPictureImageView.kf.setImage(with: url)
         }
-        
-        if !user.status {
-            setupOnline()
-        } else {
-            setupOffline()
-        }
+        !user.status ? setupOnline() : setupOffline()
     }
 }
