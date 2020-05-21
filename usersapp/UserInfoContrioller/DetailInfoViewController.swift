@@ -83,7 +83,26 @@ class DetailInfoViewController: UIViewController {
 extension DetailInfoViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        debugPrint("delegate scroll")
+
+
+        
+        if scrollView.panGestureRecognizer.translation(in: scrollView.superview).y > 0 {
+            UIView.animate(withDuration: 0.5) {
+                self.userPictureBorderView.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
+            
+            
+        } else {
+            
+            UIView.animate(withDuration: 0.5) {
+                self.userPictureBorderView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+       
+                
+            }
+        }
+        
+
+
     }
     
     
