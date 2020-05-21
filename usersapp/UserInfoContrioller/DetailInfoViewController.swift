@@ -13,6 +13,7 @@ import FlagKit
 
 class DetailInfoViewController: UIViewController {
     
+    @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var userPictureBorderView: UIView!
     @IBOutlet weak var userPictureFrameView: UIView!
     @IBOutlet weak var userPictureImageView: UIImageView!
@@ -41,6 +42,9 @@ class DetailInfoViewController: UIViewController {
         } else {
             navigationController?.popViewController(animated: false)
         }
+        
+        self.mainScrollView.delegate = self
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -76,7 +80,14 @@ class DetailInfoViewController: UIViewController {
     }
 }
 
-
+extension DetailInfoViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        debugPrint("delegate scroll")
+    }
+    
+    
+}
 
 
 

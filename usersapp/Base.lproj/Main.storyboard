@@ -675,6 +675,7 @@
                     </view>
                     <size key="freeformSize" width="414" height="1020"/>
                     <connections>
+                        <outlet property="mainScrollView" destination="VD9-dh-Vw2" id="EYD-yV-fiu"/>
                         <outlet property="nationalityImageView" destination="0GF-cs-xCf" id="lv4-mK-jUC"/>
                         <outlet property="natioonalityTextLabel" destination="RB7-ji-5S1" id="4Zb-Zb-9te"/>
                         <outlet property="userDateOfBirthTextLabel" destination="S9o-UZ-XZM" id="DIK-0p-eRG"/>
