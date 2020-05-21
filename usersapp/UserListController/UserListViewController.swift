@@ -42,7 +42,7 @@ class UserListViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+        
         let gradientLayers = self.view.layer.sublayers?.compactMap { $0 as? CAGradientLayer }
         gradientLayers?.first?.frame = self.view.bounds
         
@@ -57,10 +57,16 @@ class UserListViewController: UIViewController {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             isListView = true
-            collectionView.reloadData()
+            UIView.transition(with: collectionView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.collectionView.reloadData() })
         case 1:
             isListView = false
-            collectionView.reloadData()
+            UIView.transition(with: collectionView,
+                              duration: 0.5,
+                              options: .transitionCrossDissolve,
+                              animations: { self.collectionView.reloadData() })
         default:
             break
         }

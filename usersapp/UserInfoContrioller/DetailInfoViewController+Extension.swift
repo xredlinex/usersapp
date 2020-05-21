@@ -154,12 +154,14 @@ extension DetailInfoViewController: UIScrollViewDelegate {
         if mainScrollView.contentOffset.y > 20 {
             UIView.animate(withDuration: 0.5) {
                 self.userPictureBorderView.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
-                self.userNameScaleScrollTopContreaint.constant = self.userNameScaleScrollTopContreaint.constant / 5
+                self.userNameScaleScrollTopContreaint.constant = self.userNameScaleScrollTopContreaint.constant / 2
+                self.view.layoutIfNeeded()
             }
         } else {
             UIView.animate(withDuration: 0.5) {
                 self.userPictureBorderView.transform = CGAffineTransform(scaleX: 1, y: 1)
                 self.userNameScaleScrollTopContreaint.constant = 20
+                self.view.layoutIfNeeded()
             }
         }
     }
