@@ -13,6 +13,7 @@ import FlagKit
 
 class DetailInfoViewController: UIViewController {
     
+    @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var userPictureBorderView: UIView!
     @IBOutlet weak var userPictureFrameView: UIView!
     @IBOutlet weak var userPictureImageView: UIImageView!
@@ -29,7 +30,7 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var userLocationAddressTextLabel: UILabel!
     @IBOutlet weak var nationalityImageView: UIImageView!
     @IBOutlet weak var natioonalityTextLabel: UILabel!
-    
+    @IBOutlet weak var userNameScaleScrollTopContreaint: NSLayoutConstraint!
     
     var user: UserModel?
     
@@ -42,6 +43,9 @@ class DetailInfoViewController: UIViewController {
         } else {
             navigationController?.popViewController(animated: false)
         }
+        
+        self.mainScrollView.delegate = self
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -76,9 +80,4 @@ class DetailInfoViewController: UIViewController {
         }
     }
 }
-
-
-
-
-
 

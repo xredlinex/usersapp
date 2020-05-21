@@ -316,7 +316,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user email" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgL-iz-3aC">
-                                                                <rect key="frame" x="125" y="14" width="234" height="21"/>
+                                                                <rect key="frame" x="95" y="14" width="234" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="HIo-ig-HbR"/>
                                                                 </constraints>
@@ -337,23 +337,34 @@
                                                                     <action selector="didTapSendMailActionButton:" destination="VL2-5m-SIM" eventType="touchUpInside" id="4J7-UR-2F5"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VRe-GS-9dw">
+                                                                <rect key="frame" x="339" y="16" width="20" height="16.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <color key="tintColor" red="0.79850763079999998" green="0.34420531989999997" blue="0.037809126079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="5Pg-ru-k2h"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="YUB-Kd-dL0"/>
+                                                                </constraints>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstItem="tgL-iz-3aC" firstAttribute="top" secondItem="d28-UO-QmN" secondAttribute="top" constant="14" id="2fT-Gg-V0A"/>
                                                             <constraint firstItem="eeN-ty-ffL" firstAttribute="bottom" secondItem="z3z-dx-OaB" secondAttribute="bottom" id="2jq-tw-s7j"/>
                                                             <constraint firstItem="Jve-DG-VHL" firstAttribute="top" secondItem="tgL-iz-3aC" secondAttribute="bottom" constant="10" id="7bZ-qo-5VM"/>
+                                                            <constraint firstItem="Jve-DG-VHL" firstAttribute="trailing" secondItem="VRe-GS-9dw" secondAttribute="trailing" id="8vI-Hn-mve"/>
+                                                            <constraint firstAttribute="trailing" secondItem="VRe-GS-9dw" secondAttribute="trailing" constant="15" id="C83-4i-OGz"/>
                                                             <constraint firstItem="dcO-nf-5wB" firstAttribute="centerY" secondItem="d28-UO-QmN" secondAttribute="centerY" id="DLW-Qd-RaV"/>
+                                                            <constraint firstItem="VRe-GS-9dw" firstAttribute="leading" secondItem="tgL-iz-3aC" secondAttribute="trailing" constant="10" id="F0v-ZI-Urd"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Hdm-jW-yj3"/>
                                                             <constraint firstItem="Jve-DG-VHL" firstAttribute="leading" secondItem="dcO-nf-5wB" secondAttribute="leading" id="c1Q-2f-SAK"/>
                                                             <constraint firstItem="dcO-nf-5wB" firstAttribute="leading" secondItem="d28-UO-QmN" secondAttribute="leading" constant="15" id="f97-na-KnO"/>
                                                             <constraint firstItem="eeN-ty-ffL" firstAttribute="top" secondItem="d28-UO-QmN" secondAttribute="top" id="jCm-fn-mgh"/>
+                                                            <constraint firstItem="VRe-GS-9dw" firstAttribute="centerY" secondItem="tgL-iz-3aC" secondAttribute="centerY" id="k9K-ke-Eth"/>
                                                             <constraint firstItem="eeN-ty-ffL" firstAttribute="trailing" secondItem="z3z-dx-OaB" secondAttribute="trailing" id="m0I-SH-4UE"/>
-                                                            <constraint firstAttribute="trailing" secondItem="tgL-iz-3aC" secondAttribute="trailing" constant="15" id="nyi-6O-nON"/>
                                                             <constraint firstItem="eeN-ty-ffL" firstAttribute="leading" secondItem="z3z-dx-OaB" secondAttribute="leading" id="s3A-6N-cHG"/>
-                                                            <constraint firstItem="Jve-DG-VHL" firstAttribute="trailing" secondItem="tgL-iz-3aC" secondAttribute="trailing" id="sNc-Cl-cPN"/>
                                                             <constraint firstAttribute="bottom" secondItem="Jve-DG-VHL" secondAttribute="bottom" constant="4" id="xK2-dL-Q6E"/>
-                                                            <constraint firstItem="tgL-iz-3aC" firstAttribute="leading" secondItem="dcO-nf-5wB" secondAttribute="trailing" constant="30" id="zH2-1y-x1E"/>
+                                                            <constraint firstItem="tgL-iz-3aC" firstAttribute="leading" secondItem="dcO-nf-5wB" secondAttribute="trailing" id="zH2-1y-x1E"/>
                                                         </constraints>
                                                         <viewLayoutGuide key="safeArea" id="z3z-dx-OaB"/>
                                                     </view>
@@ -371,7 +382,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="user phone" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5X-QY-Qek">
-                                                                <rect key="frame" x="125" y="14" width="234" height="21"/>
+                                                                <rect key="frame" x="125" y="14" width="204" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="Tuo-F1-2fV"/>
                                                                 </constraints>
@@ -392,6 +403,14 @@
                                                                     <action selector="didTapMakeCallActionButton:" destination="VL2-5m-SIM" eventType="touchUpInside" id="jmQ-IE-KIm"/>
                                                                 </connections>
                                                             </button>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FuK-Dn-rY4">
+                                                                <rect key="frame" x="339" y="15" width="20" height="19"/>
+                                                                <color key="tintColor" red="0.79850763079999998" green="0.34420531989999997" blue="0.037809126079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="20" id="uf7-aF-Pdq"/>
+                                                                    <constraint firstAttribute="width" constant="20" id="utZ-uG-Mhm"/>
+                                                                </constraints>
+                                                            </imageView>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -399,6 +418,8 @@
                                                             <constraint firstItem="A5X-QY-Qek" firstAttribute="leading" secondItem="goa-tl-Pn9" secondAttribute="trailing" constant="30" id="6sf-1v-Ju1"/>
                                                             <constraint firstItem="goa-tl-Pn9" firstAttribute="leading" secondItem="Meb-Mi-6Te" secondAttribute="leading" constant="15" id="75k-MH-Qa2"/>
                                                             <constraint firstItem="EjY-c8-yWi" firstAttribute="trailing" secondItem="q8T-op-ugk" secondAttribute="trailing" id="BV6-9C-uPe"/>
+                                                            <constraint firstItem="FuK-Dn-rY4" firstAttribute="centerY" secondItem="A5X-QY-Qek" secondAttribute="centerY" id="HSA-iQ-HLl"/>
+                                                            <constraint firstItem="L0l-Pb-anI" firstAttribute="trailing" secondItem="FuK-Dn-rY4" secondAttribute="trailing" id="JJa-Iv-qS6"/>
                                                             <constraint firstAttribute="bottom" secondItem="L0l-Pb-anI" secondAttribute="bottom" constant="4" id="Lit-Tg-f86"/>
                                                             <constraint firstItem="A5X-QY-Qek" firstAttribute="top" secondItem="Meb-Mi-6Te" secondAttribute="top" constant="14" id="OPw-zQ-7TP"/>
                                                             <constraint firstItem="L0l-Pb-anI" firstAttribute="top" secondItem="A5X-QY-Qek" secondAttribute="bottom" constant="10" id="RH0-w4-ELT"/>
@@ -407,8 +428,8 @@
                                                             <constraint firstItem="EjY-c8-yWi" firstAttribute="leading" secondItem="q8T-op-ugk" secondAttribute="leading" id="aIs-t6-lFP"/>
                                                             <constraint firstItem="L0l-Pb-anI" firstAttribute="leading" secondItem="goa-tl-Pn9" secondAttribute="leading" id="caQ-WK-ueK"/>
                                                             <constraint firstItem="EjY-c8-yWi" firstAttribute="top" secondItem="Meb-Mi-6Te" secondAttribute="top" id="eM1-BO-Rkw"/>
-                                                            <constraint firstAttribute="trailing" secondItem="A5X-QY-Qek" secondAttribute="trailing" constant="15" id="mVd-dd-Mok"/>
-                                                            <constraint firstItem="L0l-Pb-anI" firstAttribute="trailing" secondItem="A5X-QY-Qek" secondAttribute="trailing" id="zGb-18-JXw"/>
+                                                            <constraint firstItem="q8T-op-ugk" firstAttribute="trailing" secondItem="FuK-Dn-rY4" secondAttribute="trailing" constant="15" id="pA8-m5-sHw"/>
+                                                            <constraint firstItem="FuK-Dn-rY4" firstAttribute="leading" secondItem="A5X-QY-Qek" secondAttribute="trailing" constant="10" id="pGX-RF-QVw"/>
                                                         </constraints>
                                                         <viewLayoutGuide key="safeArea" id="q8T-op-ugk"/>
                                                     </view>
@@ -654,6 +675,7 @@
                     </view>
                     <size key="freeformSize" width="414" height="1020"/>
                     <connections>
+                        <outlet property="mainScrollView" destination="VD9-dh-Vw2" id="EYD-yV-fiu"/>
                         <outlet property="nationalityImageView" destination="0GF-cs-xCf" id="lv4-mK-jUC"/>
                         <outlet property="natioonalityTextLabel" destination="RB7-ji-5S1" id="4Zb-Zb-9te"/>
                         <outlet property="userDateOfBirthTextLabel" destination="S9o-UZ-XZM" id="DIK-0p-eRG"/>
@@ -662,6 +684,7 @@
                         <outlet property="userLocationAddressTextLabel" destination="9KH-0O-1Du" id="rlR-fd-Cp8"/>
                         <outlet property="userLocationTextLabel" destination="Xgj-hS-a8G" id="Ffl-qV-6nP"/>
                         <outlet property="userLoginNameTextLabel" destination="WLH-mx-JBm" id="JDV-Tw-0rN"/>
+                        <outlet property="userNameScaleScrollTopContreaint" destination="GRE-iP-y8d" id="rmF-im-pah"/>
                         <outlet property="userNameTextLabel" destination="6N9-S8-w3W" id="IcE-xQ-hp9"/>
                         <outlet property="userOnlineShadowView" destination="C4h-kZ-qek" id="bv1-QD-2f9"/>
                         <outlet property="userOnlineStatusTextLabel" destination="5Fj-Nq-d36" id="Q79-1q-Fzp"/>
@@ -698,7 +721,9 @@
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
         <image name="bubble.left" catalog="system" width="128" height="110"/>
+        <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="phone.circle" catalog="system" width="128" height="121"/>
         <image name="rectangle.grid.2x2" catalog="system" width="128" height="99"/>
     </resources>
 </document>

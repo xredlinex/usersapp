@@ -25,16 +25,13 @@ class UsersListCollectionViewCell: UICollectionViewCell {
     }
     
     func updateListCell(_ user: UserModel) {
+        
         if let url = URL(string: user.picture?.medium ?? "") {
             userPictureImageView.kf.setImage(with: url)
         }
         userNameTextLabel.text = user.name?.first ?? ""
         userLastNameTextLabel.text = user.name?.last ?? ""
         
-        if !user.status {
-            setupOffline()
-        } else {
-            setupOnline()
-        }
+        !user.status ? setupOffline() : setupOnline()
     }
 }
