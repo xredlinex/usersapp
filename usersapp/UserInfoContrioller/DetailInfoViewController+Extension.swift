@@ -146,3 +146,21 @@ extension DetailInfoViewController {
         }
     }
 }
+
+extension DetailInfoViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if mainScrollView.contentOffset.y > 20 {
+            UIView.animate(withDuration: 0.5) {
+                self.userPictureBorderView.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+                self.userNameScaleScrollTopContreaint.constant = self.userNameScaleScrollTopContreaint.constant / 5
+            }
+        } else {
+            UIView.animate(withDuration: 0.5) {
+                self.userPictureBorderView.transform = CGAffineTransform(scaleX: 1, y: 1)
+                self.userNameScaleScrollTopContreaint.constant = 20
+            }
+        }
+    }
+}

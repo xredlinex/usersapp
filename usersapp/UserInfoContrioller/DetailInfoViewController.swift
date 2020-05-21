@@ -30,6 +30,7 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var userLocationAddressTextLabel: UILabel!
     @IBOutlet weak var nationalityImageView: UIImageView!
     @IBOutlet weak var natioonalityTextLabel: UILabel!
+    @IBOutlet weak var userNameScaleScrollTopContreaint: NSLayoutConstraint!
     
     var user: UserModel?
     
@@ -79,35 +80,4 @@ class DetailInfoViewController: UIViewController {
         }
     }
 }
-
-extension DetailInfoViewController: UIScrollViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-
-
-        
-        if scrollView.panGestureRecognizer.translation(in: scrollView.superview).y > 0 {
-            UIView.animate(withDuration: 0.5) {
-                self.userPictureBorderView.transform = CGAffineTransform(scaleX: 1, y: 1)
-            }
-            
-            
-        } else {
-            
-            UIView.animate(withDuration: 0.5) {
-                self.userPictureBorderView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-       
-                
-            }
-        }
-        
-
-
-    }
-    
-    
-}
-
-
-
 

@@ -684,6 +684,7 @@
                         <outlet property="userLocationAddressTextLabel" destination="9KH-0O-1Du" id="rlR-fd-Cp8"/>
                         <outlet property="userLocationTextLabel" destination="Xgj-hS-a8G" id="Ffl-qV-6nP"/>
                         <outlet property="userLoginNameTextLabel" destination="WLH-mx-JBm" id="JDV-Tw-0rN"/>
+                        <outlet property="userNameScaleScrollTopContreaint" destination="GRE-iP-y8d" id="rmF-im-pah"/>
                         <outlet property="userNameTextLabel" destination="6N9-S8-w3W" id="IcE-xQ-hp9"/>
                         <outlet property="userOnlineShadowView" destination="C4h-kZ-qek" id="bv1-QD-2f9"/>
                         <outlet property="userOnlineStatusTextLabel" destination="5Fj-Nq-d36" id="Q79-1q-Fzp"/>
