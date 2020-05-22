@@ -10,7 +10,6 @@
 import UIKit
 import FlagKit
 
-
 class DetailInfoViewController: UIViewController {
     
     @IBOutlet weak var mainScrollView: UIScrollView!
@@ -33,6 +32,7 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var userNameScaleScrollTopContreaint: NSLayoutConstraint!
     
     var user: UserModel?
+    var errorTextMsg = AlertErrors()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,21 +62,30 @@ class DetailInfoViewController: UIViewController {
     }
     
     @IBAction func didTapSendMessageActionButton(_ sender: Any) {
-
-        if let number = user?.cell {
-            sendMessage(number)
+        if let status = user?.status, status != false {
+            if let number = user?.cell {
+                sendMessage(number)
+            } else {
+                showAlert(message: errorTextMsg.errorKey(error: .noCell))
+            }
+        } else {
+            showAlert(message: errorTextMsg.errorKey(error: .userOffline))
         }
     }
     
     @IBAction func didTapSendMailActionButton(_ sender: Any) {
         if let mail = user?.email {
             sendMail(mail)
+        } else {
+            showAlert(message: errorTextMsg.errorKey(error: .noEmail))
         }
     }
     
     @IBAction func didTapMakeCallActionButton(_ sender: Any) {
         if let userNumber = user?.cell {
             makeCall(userNumber)
+        } else {
+            showAlert(message: errorTextMsg.errorKey(error: .noCell))
         }
     }
 }

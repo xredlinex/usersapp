@@ -35,11 +35,29 @@
                                             <action selector="didTapChangeSegmentedControl:" destination="lIr-ZX-Kgl" eventType="valueChanged" id="bt7-jF-ycZ"/>
                                         </connections>
                                     </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="usersApp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDz-gK-1a9">
+                                        <rect key="frame" x="168" y="15" width="78.5" height="20"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.79850763079999998" green="0.34420531989999997" blue="0.037809126079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LqA-ZO-mAI">
+                                        <rect key="frame" x="128" y="11.5" width="30" height="27.5"/>
+                                        <color key="tintColor" red="0.79850763079999998" green="0.34420531989999997" blue="0.037809126079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="KLw-uL-Pi1"/>
+                                            <constraint firstAttribute="width" constant="30" id="qbK-A0-77Z"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="yDz-gK-1a9" firstAttribute="centerY" secondItem="Xoc-2P-cba" secondAttribute="centerY" id="AbC-FL-ggj"/>
+                                    <constraint firstItem="yDz-gK-1a9" firstAttribute="centerX" secondItem="Xoc-2P-cba" secondAttribute="centerX" id="D9F-as-l0t"/>
                                     <constraint firstItem="CKw-Ej-aRJ" firstAttribute="centerY" secondItem="Xoc-2P-cba" secondAttribute="centerY" id="FAh-Lv-Cmn"/>
                                     <constraint firstAttribute="height" constant="50" id="Tgl-wq-Byw"/>
+                                    <constraint firstItem="yDz-gK-1a9" firstAttribute="leading" secondItem="LqA-ZO-mAI" secondAttribute="trailing" constant="10" id="kb9-dS-UMJ"/>
+                                    <constraint firstItem="LqA-ZO-mAI" firstAttribute="centerY" secondItem="yDz-gK-1a9" secondAttribute="centerY" id="qFl-4G-ae7"/>
                                     <constraint firstAttribute="trailing" secondItem="CKw-Ej-aRJ" secondAttribute="trailing" constant="20" id="w2q-bP-vUl"/>
                                 </constraints>
                             </view>
@@ -723,6 +741,7 @@
         <image name="bubble.left" catalog="system" width="128" height="110"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="person.2" catalog="system" width="128" height="81"/>
         <image name="phone.circle" catalog="system" width="128" height="121"/>
         <image name="rectangle.grid.2x2" catalog="system" width="128" height="99"/>
     </resources>

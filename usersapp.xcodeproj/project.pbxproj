@@ -13,6 +13,7 @@
 		9701E544247338E100130286 /* UserGridCollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9701E543247338E100130286 /* UserGridCollectionViewCell+Extension.swift */; };
 		971591BE2473CE0300B76A50 /* DetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971591BD2473CE0300B76A50 /* DetailInfoViewController.swift */; };
 		971591C12473CE4B00B76A50 /* DetailInfoViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971591C02473CE4B00B76A50 /* DetailInfoViewController+Extension.swift */; };
+		97165DFB2477D97000C50F0D /* ErrorAlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97165DFA2477D97000C50F0D /* ErrorAlertModel.swift */; };
 		973E2C7D24717EB500DAFEF6 /* UserListViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973E2C7C24717EB500DAFEF6 /* UserListViewController+CollectionView.swift */; };
 		973E2C7F2471B98400DAFEF6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973E2C7E2471B98400DAFEF6 /* UIView+Extension.swift */; };
 		9766F53424755B4C00B124DA /* libFlagKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9766F53324755B4C00B124DA /* libFlagKit.a */; };
@@ -37,6 +38,7 @@
 		9701E543247338E100130286 /* UserGridCollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserGridCollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		971591BD2473CE0300B76A50 /* DetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoViewController.swift; sourceTree = "<group>"; };
 		971591C02473CE4B00B76A50 /* DetailInfoViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailInfoViewController+Extension.swift"; sourceTree = "<group>"; };
+		97165DFA2477D97000C50F0D /* ErrorAlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertModel.swift; sourceTree = "<group>"; };
 		973E2C7C24717EB500DAFEF6 /* UserListViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		973E2C7E2471B98400DAFEF6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9766F53324755B4C00B124DA /* libFlagKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFlagKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,22 @@
 			path = UserInfoContrioller;
 			sourceTree = "<group>";
 		};
+		97165DFC2477F23400C50F0D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				97A672E0246EB67B0030E7C2 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		97165DFD2477F5BB00C50F0D /* ErrorModel */ = {
+			isa = PBXGroup;
+			children = (
+				97165DFA2477D97000C50F0D /* ErrorAlertModel.swift */,
+			);
+			path = ErrorModel;
+			sourceTree = "<group>";
+		};
 		97A672CE246EB67B0030E7C2 = {
 			isa = PBXGroup;
 			children = (
@@ -102,9 +120,10 @@
 			children = (
 				97A672DA246EB67B0030E7C2 /* AppDelegate.swift */,
 				97A672DC246EB67B0030E7C2 /* SceneDelegate.swift */,
-				97A672E0246EB67B0030E7C2 /* Main.storyboard */,
+				97165DFC2477F23400C50F0D /* Storyboard */,
 				97D9BD302473D7EC00455955 /* UIExtension */,
 				97D39EDC246F2E6400DC4C2B /* UserModel */,
+				97165DFD2477F5BB00C50F0D /* ErrorModel */,
 				97D39EFE24702AC000DC4C2B /* UserListController */,
 				971591BF2473CE1600B76A50 /* UserInfoContrioller */,
 				97A672E3246EB67C0030E7C2 /* Assets.xcassets */,
@@ -299,6 +318,7 @@
 			files = (
 				97A672DB246EB67B0030E7C2 /* AppDelegate.swift in Sources */,
 				97D39F002470301400DC4C2B /* UserListViewController+Request.swift in Sources */,
+				97165DFB2477D97000C50F0D /* ErrorAlertModel.swift in Sources */,
 				971591BE2473CE0300B76A50 /* DetailInfoViewController.swift in Sources */,
 				9701E542247338B500130286 /* UsersListCollectionViewCell+Extension.swift in Sources */,
 				973E2C7D24717EB500DAFEF6 /* UserListViewController+CollectionView.swift in Sources */,

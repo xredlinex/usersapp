@@ -14,15 +14,14 @@ class UserListViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var users: [UserModel] = []
-    
     var maxCount = 200
     var pageSize = 10
     var pageNumber = 1
     var isloaded = true
     var isListView = true
-    
     var estimateWidth = 100
     var cellMarginSize = 5
+    var errorTextMsg = AlertErrors()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,10 +46,6 @@ class UserListViewController: UIViewController {
         gradientLayers?.first?.frame = self.view.bounds
         
         self.setupGridView()
-        
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
     }
     
     @IBAction func didTapChangeSegmentedControl(_ sender: Any) {
@@ -73,9 +68,20 @@ class UserListViewController: UIViewController {
     }
     
     @IBAction func didTapReloadUsersActioButton(_ sender: Any) {
-        users.removeAll()
-        pageNumber = 1
-        isloaded = false
-        requestUsers()
+        
+        let alertController = UIAlertController(title: "", message: errorTextMsg.errorKey(error: .reloadUsers), preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .default) { (_) in
+            self.users.removeAll()
+            self.pageNumber = 1
+            self.isloaded = false
+            self.requestUsers()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (_) in }
+        alertController.addAction(alertAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
     }
 }
+
+
+
