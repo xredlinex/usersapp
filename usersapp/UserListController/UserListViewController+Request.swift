@@ -27,12 +27,18 @@ extension UserListViewController {
                                 DispatchQueue.main.async {
                                     self.collectionView.reloadData()
                                 }
+                            } else {
+                                self.showAlert(message: self.errorTextMsg.errorKey(error: .cantLoadUsers))
                             }
                         } catch {
                             print(error)
                         }
+                    } else {
+                        self.showAlert(message: self.errorTextMsg.errorKey(error: .request))
                     }
                 }
+            } else {
+                showAlert(message: errorTextMsg.errorKey(error: .urlError))
             }
         }
     }

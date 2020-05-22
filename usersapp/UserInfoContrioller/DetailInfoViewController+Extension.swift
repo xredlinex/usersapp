@@ -166,3 +166,13 @@ extension DetailInfoViewController: UIScrollViewDelegate {
         }
     }
 }
+
+extension DetailInfoViewController {
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .default) { (_) in }
+        alertController.addAction(alertAction)
+        present(alertController, animated: true)
+    }
+}

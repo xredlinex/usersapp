@@ -44,11 +44,14 @@ extension UserListViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailInfoViewController") as! DetailInfoViewController
-        viewController.user = users[indexPath.row]
-        navigationController?.pushViewController(viewController, animated: true)
+        if users[indexPath.row].name != nil || users[indexPath.row].email != nil {
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailInfoViewController") as! DetailInfoViewController
+            viewController.user = users[indexPath.row]
+            navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            showAlert(message: errorTextMsg.errorKey(error: .noUserInfo))
+        }
     }
-    
 }
 
 extension UserListViewController: UICollectionViewDelegateFlowLayout {
